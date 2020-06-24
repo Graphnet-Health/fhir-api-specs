@@ -1,17 +1,17 @@
 module.exports = {
-  title: 'Demo API Guide',
-  tagline: 'Just testing things for now',
+  title: 'CareCentric FHIR API Guide',
+  tagline: 'FHIR API guide for CareCentric',
   url: 'https://your-docusaurus-test-site.com',
   baseUrl: '/',
-  favicon: 'img/favicon.ico',
+  favicon: 'img/favicon.png',
   organizationName: 'facebook', // Usually your GitHub org/user name.
   projectName: 'docusaurus', // Usually your repo name.
   themeConfig: {
     navbar: {
-      title: 'My Site',
+      title: 'CareCentric FHIR API',
       logo: {
         alt: 'My Site Logo',
-        src: 'img/logo.svg',
+        src: 'img/Graphnet-Logo-500px.png',
       },
       links: [
         {
@@ -30,6 +30,11 @@ module.exports = {
     },
     footer: {
       style: 'dark',
+      logo: {
+        alt: 'Facebook Open Source Logo',
+        src: 'img/Graphnet-Logo-500px.png',
+        href: 'https://opensource.facebook.com',
+      },
       links: [
         {
           title: 'Docs',
@@ -75,7 +80,7 @@ module.exports = {
           ],
         },
       ],
-      copyright: `Copyright © ${new Date().getFullYear()} My Project, Inc. Built with Docusaurus.`,
+      copyright: `Copyright © ${new Date().getFullYear()} Graphnet Health Limited.`,
     },
   },
   presets: [
