@@ -20,6 +20,12 @@ module.exports = {
           label: 'Docs',
           position: 'left',
         },
+        {
+          to: 'docs/doc4',
+          activeBasePath: 'docs',
+          label: 'Test',
+          position: 'left',
+        },
         { to: 'blog', label: 'Blog', position: 'left' },
         { to: 'docs/version-history/releases', label: 'Versions', position: 'right' },
         {
