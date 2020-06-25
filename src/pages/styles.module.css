@@ -8,8 +8,13 @@
 .heroBanner {
   padding: 4rem 0;
   text-align: center;
+  background-color: #abc;
   position: relative;
   overflow: hidden;
+}
+
+.hero__title {
+color:red
 }
 
 @media screen and (max-width: 966px) {
@@ -17,6 +22,16 @@
     padding: 2rem;
   }
 }
+
+.hero--primary {
+  --ifm-hero-background-color: #ddd;
+  --ifm-hero-text-color: var(--ifm-font-color-base-inverse);
+}
+
+.clarox {
+  background-color: #abc
+}
+
 
 .buttons {
   display: flex;
