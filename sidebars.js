@@ -26,20 +26,21 @@ module.exports = {
   trial: [
     {
       type: 'category',
-      label: 'trial 1',
-      items: ['doc1', 'doc2', 'doc3'],
-    },
-    {
-      type: 'category',
-      label: 'trial 2',
+      label: 'FHIR Resources',
       items: [
-        'doc1',
-        'doc2',
+        'resources/profileOverview',
         {
-          Resources: ['doc2', 'doc3'],
+          Resources: [
+            'resources/medication', 
+            'resources/medicationStatement', 
+            'resources/medicationRequest',
+            'resources/patient'
+          ],
         },
         {
-          Extensions: ['doc2', 'doc3'],
+          Extensions: [
+            'resources/extLastIssueDate', 
+            'resources/extPrescriptionType'],
         },
         'doc3'],
     },

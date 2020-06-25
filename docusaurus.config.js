@@ -21,15 +21,14 @@ module.exports = {
           position: 'left',
         },
         {
-          to: 'docs/doc4',
+          to: 'docs/resources/profileOverview',
           activeBasePath: 'docs',
-          label: 'Test',
+          label: 'Resources',
           position: 'left',
         },
         { to: 'blog', label: 'Blog', position: 'left' },
         { to: 'docs/version-history/releases', label: 'Versions', position: 'right' },
         {
-          href: 'https://github.com/facebook/docusaurus',
           label: 'GitHub',
           position: 'right',
         },
@@ -38,9 +37,9 @@ module.exports = {
     footer: {
       style: 'dark',
       logo: {
-        alt: 'Facebook Open Source Logo',
+        alt: 'Graphnet Health Logo',
         src: 'img/Graphnet-Logo-500px.png',
-        href: 'https://opensource.facebook.com',
+        href: 'https://www.graphnethealth.com/',
       },
       links: [
         {
@@ -99,14 +98,14 @@ module.exports = {
           homePageId: 'doc1',
           sidebarPath: require.resolve('./sidebars.js'),
           // Please change this to your repo.
-          editUrl:
-            'https://github.com/facebook/docusaurus/edit/master/website/',
+         // editUrl:
+          //  'https://github.com/facebook/docusaurus/edit/master/website/',
         },
         blog: {
           showReadingTime: true,
           // Please change this to your repo.
-          editUrl:
-            'https://github.com/facebook/docusaurus/edit/master/website/blog/',
+          // editUrl:
+          //   'https://github.com/facebook/docusaurus/edit/master/website/blog/',
         },
         theme: {
           customCss: require.resolve('./src/css/custom.css'),
