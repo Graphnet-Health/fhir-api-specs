@@ -19,10 +19,10 @@ We are delivering support for each of the CareConnect profiles and interactions 
 - Immunization (from the GP record)
 
 
- ![alt text](/static/img/CCFHIR-Phase1.png 'FHIR APIs')
+ ![alt text](/img/CCFHIR-Phase1.png 'FHIR APIs')
 
 ## Delivery Roadmap
 Subsequent releases will introduce other resources and data from other sources (Acute, Community, Social Care etc). The current roadmap for these releases is below, although this is subject to change as we understand the priorities of API consumers.
 
 
- ![alt text](/static/img/FHIR-Roadmap.png 'FHIR Roadmap')
+ ![alt text](/img/FHIR-Roadmap.png 'FHIR Roadmap')
