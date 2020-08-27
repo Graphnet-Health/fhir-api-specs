@@ -1,28 +1,20 @@
 module.exports = {
   docs: [
+    'api_introduction',
     {
       type: 'category',
-      label: 'category 1',
-      items: ['doc4', 'testing/doc5', 'doc3'],
+      label: 'Authentication',
+      items: [
+        'authorisation/authenticate', 
+        'authorisation/user_auth', 
+        'authorisation/system_system_auth',
+        'authorisation/national_auth'],
     },
-    {
-      type: 'category',
-      label: 'category 2',
-      items: ['doc1', 'doc2', 'doc3'],
-    },
+    'fhir_apis',
+    'cc_apis',
+    'cc_data_sub_apis'
   ],
-  test: [
-    {
-      type: 'category',
-      label: 'test 1',
-      items: ['doc1', 'doc2', 'doc3'],
-    },
-    {
-      type: 'category',
-      label: 'test 2',
-      items: ['doc1', 'doc2', 'doc3'],
-    },
-  ],
+
   trial: [
     {
       type: 'category',
@@ -41,8 +33,7 @@ module.exports = {
           Extensions: [
             'resources/extLastIssueDate', 
             'resources/extPrescriptionType'],
-        },
-        'doc3'],
+        }],
     },
   ],
 };

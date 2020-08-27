@@ -26,12 +26,6 @@ module.exports = {
           label: 'Resources',
           position: 'left',
         },
-        { to: 'blog', label: 'Blog', position: 'left' },
-        { to: 'docs/version-history/releases', label: 'Versions', position: 'right' },
-        {
-          label: 'GitHub',
-          position: 'right',
-        },
       ],
     },
     footer: {
@@ -95,7 +89,7 @@ module.exports = {
       {
         docs: {
           // It is recommended to set document id as docs home page (`docs/` path).
-          homePageId: 'doc1',
+          homePageId: 'api_introduction',
           sidebarPath: require.resolve('./sidebars.js'),
           // Please change this to your repo.
          // editUrl:
