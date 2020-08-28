@@ -20,12 +20,12 @@ module.exports = {
           label: 'Docs',
           position: 'left',
         },
-        {
-          to: 'docs/resources/profileOverview',
-          activeBasePath: 'docs',
-          label: 'Resources',
-          position: 'left',
-        },
+        // {
+        //   to: 'docs/resources/profileOverview',
+        //   activeBasePath: 'docs',
+        //   label: 'Resources',
+        //   position: 'left',
+        // },
       ],
     },
     footer: {
