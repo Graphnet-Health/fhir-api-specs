@@ -1,39 +1,48 @@
 module.exports = {
   docs: [
-    'api_introduction',
+    "api_introduction",
     {
-      type: 'category',
-      label: 'Authentication',
+      type: "category",
+      label: "Authentication",
       items: [
-        'authorisation/authenticate', 
-        'authorisation/user_auth', 
-        'authorisation/system_system_auth',
-        'authorisation/national_auth'],
+        "authorisation/authenticate",
+        "authorisation/user_auth",
+        "authorisation/system_system_auth",
+        "authorisation/national_auth",
+      ],
     },
-    'fhir_apis',
-    'cc_apis',
-    'cc_data_sub_apis'
+    "fhir_apis",
+    "cc_apis",
+    "cc_data_sub_apis",
   ],
 
   trial: [
     {
-      type: 'category',
-      label: 'FHIR Resources',
+      type: "category",
+      label: "FHIR Resources",
       items: [
-        'resources/profileOverview',
+        "resources/profileOverview",
         {
           Resources: [
-            'resources/medication', 
-            'resources/medicationStatement', 
-            'resources/medicationRequest',
-            'resources/patient'
+            "resources/allergy",
+            "resources/condition",
+            "resources/immunization",
+            "resources/medication",
+            "resources/medicationStatement",
+            "resources/medicationRequest",
+            "resources/observation",
+            "resources/patient",
+            "resources/procedure",
+            "resources/overview",
           ],
         },
         {
           Extensions: [
-            'resources/extLastIssueDate', 
-            'resources/extPrescriptionType'],
-        }],
+            "resources/extLastIssueDate",
+            "resources/extPrescriptionType",
+          ],
+        },
+      ],
     },
   ],
 };

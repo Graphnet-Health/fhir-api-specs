@@ -1,0 +1,78 @@
+.lc-container {
+  border: 1px solid var(--ifm-color-emphasis-300);
+  border-radius: var(--ifm-global-radius);
+  padding: 0.75rem;
+  font-size: 1rem;
+  margin-bottom: 0.5rem;
+  /* max-width: 45em; */
+  display: block;
+}
+
+.lc-container:hover {
+  border-color: var(--ifm-color-primary);
+  text-decoration: none;
+}
+
+.lc-title {
+  font-weight: 600;
+  margin-right: 0.5em;
+}
+
+.lc-description {
+  font-size: 0.875rem;
+  color: var(--ifm-font-color-secondary);
+}
+
+.lc-grid-container {
+  display: grid;
+  grid-template-columns: auto 60px 60px 60px 60px;
+}
+
+.lc-grid-resourceName {
+  grid-column: 1/1;
+  font-size: 1.3rem;
+  color: black;
+}
+
+.lc-grid-httpGET {
+  grid-column-start: 2;
+  grid-column-end: 2;
+
+  text-align: center;
+}
+.lc-grid-httpPOST {
+  grid-column-start: 3;
+  grid-column-end: 3;
+}
+.lc-grid-httpPUT {
+  grid-column-start: 4;
+  grid-column-end: 4;
+}
+.lc-grid-httpDELETE {
+  grid-column-start: 5;
+  grid-column-end: 5;
+}
+
+.lc-grid-httpTRUE {
+  background-color: green;
+  border: 1px green;
+  border-radius: 6px;
+  place-self: center;
+  padding: 4px;
+  color: white;
+  width: 50px;
+  text-align: center;
+  font-size: 0.8rem;
+}
+
+.lc-grid-httpFALSE {
+  background-color: lightgray;
+  border: 1px lightgray;
+  border-radius: 6px;
+  place-self: center;
+  padding: 4px;
+  color: white;
+  width: 50px;
+  text-align: center;
+  font-size: 0.8rem;
+}
