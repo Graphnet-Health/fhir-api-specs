@@ -1,0 +1,16 @@
+{
+  "resources": [
+    {
+      "type": "Immunization",
+      "status": ["GET"]
+    },
+    {
+      "type": "AllergyIntolerance",
+      "status": ["GET"]
+    },
+    {
+      "type": "Observation",
+      "status": ["GET", "POST", "PUT"]
+    }
+  ]
+}
