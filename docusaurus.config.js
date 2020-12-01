@@ -1,5 +1,5 @@
 module.exports = {
-  title: "CareCentric FHIR API Guidee",
+  title: "CareCentric FHIR API Guide",
   tagline: "FHIR API guide for CareCentric",
   url: "https://your-docusaurus-test-site.com",
   baseUrl: "/",
