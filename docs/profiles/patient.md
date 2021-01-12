@@ -1,7 +1,7 @@
 ---
-id: overview123
-title: overview
-sidebar_label: Resource Overview
+id: Patient
+title: Patient
+sidebar_label: Patient
 ---
 
 You can write content using [GitHub-flavored Markdown syntax](https://github.github.com/gfm/).

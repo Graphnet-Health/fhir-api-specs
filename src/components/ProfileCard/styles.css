@@ -1,0 +1,43 @@
+.pc-container {
+  border: 1px solid var(--ifm-color-emphasis-300);
+  border-radius: var(--ifm-global-radius);
+  padding: 0.75rem;
+  font-size: 1rem;
+  margin-bottom: 0.5rem;
+  /* max-width: 45em; */
+  display: block;
+  background-color: rgb(247, 247, 247);
+}
+
+.pc-container:hover {
+  border-color: var(--ifm-color-primary);
+  text-decoration: none;
+}
+
+.pc-title {
+  font-weight: 600;
+  margin-right: 0.5em;
+}
+
+.pc-description {
+  font-size: 0.875rem;
+  color: var(--ifm-font-color-secondary);
+}
+
+.pc-grid-pcontainer {
+  display: grid;
+  grid-template-columns: 200px auto;
+}
+
+.pc-grid-presourceName {
+  grid-column: 1/1;
+  font-size: 1.1rem;
+  color: var(--ifm-color-primary);
+}
+
+.pc-grid-presourceProfile {
+  grid-column: 2/2;
+  font-size: 0.9rem;
+  color: black;
+  align-self: center;
+}

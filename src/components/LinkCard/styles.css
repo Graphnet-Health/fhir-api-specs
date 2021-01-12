@@ -1,9 +1,10 @@
 .lc-container {
   border: 1px solid var(--ifm-color-emphasis-300);
   border-radius: var(--ifm-global-radius);
-  padding: 0.75rem;
+  padding: 0.325rem;
+
   font-size: 1rem;
-  margin-bottom: 0.5rem;
+  margin-bottom: 0.25rem;
   /* max-width: 45em; */
   display: block;
 }
@@ -53,9 +54,9 @@
   grid-column-end: 5;
 }
 
-.lc-grid-httpTRUE {
-  background-color: green;
-  border: 1px green;
+.lc-grid-httpGreen {
+  background-color: #8bb57b;
+  border: 1px #8bb57b;
   border-radius: 6px;
   place-self: center;
   padding: 4px;
@@ -65,13 +66,25 @@
   font-size: 0.8rem;
 }
 
-.lc-grid-httpFALSE {
-  background-color: lightgray;
-  border: 1px lightgray;
+.lc-grid-httpAmber {
+  background-color: #f5b767;
+  border: 1px #f5b767;
   border-radius: 6px;
   place-self: center;
   padding: 4px;
   color: white;
+  width: 50px;
+  text-align: center;
+  font-size: 0.8rem;
+}
+
+.lc-grid-httpRed {
+  background-color: #d1d1d1;
+  border: 1px #d1d1d1;
+  border-radius: 6px;
+  place-self: center;
+  padding: 4px;
+  color: #6e6e6e;
   width: 50px;
   text-align: center;
   font-size: 0.8rem;

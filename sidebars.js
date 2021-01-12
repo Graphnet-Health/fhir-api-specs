@@ -15,25 +15,31 @@ module.exports = {
     "cc_apis",
     "cc_data_sub_apis",
   ],
-
+  api: [
+    {
+      type: "category",
+      label: "FHIR APIs",
+      items: ["api/apiOverview"],
+    },
+  ],
   trial: [
     {
       type: "category",
-      label: "FHIR Resources",
+      label: "FHIR Profiles",
       items: [
-        "resources/profileOverview",
+        "profiles/profileOverview",
         {
-          Resources: [
-            "resources/allergy",
-            "resources/condition",
-            "resources/immunization",
-            "resources/medication",
-            "resources/medicationStatement",
-            "resources/medicationRequest",
-            "resources/observation",
-            "resources/patient",
-            "resources/procedure",
-            "resources/overview",
+          Profiles: [
+            "profiles/AllergyIntolerance",
+            "profiles/Condition",
+            "profiles/Encounter",
+            "profiles/Immunization",
+            "profiles/Medication",
+            "profiles/MedicationStatement",
+            "profiles/MedicationRequest",
+            "profiles/Observation",
+            "profiles/Patient",
+            "profiles/Procedure",
           ],
         },
         {

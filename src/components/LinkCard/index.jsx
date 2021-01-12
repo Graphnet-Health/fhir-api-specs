@@ -13,9 +13,22 @@ function linkString(x) {
 }
 
 function displayStatus(x, verb) {
-  const css = x
-    ? `lc-grid-http{verb} lc-grid-httpTRUE`
-    : "lc-grid-http{verb} lc-grid-httpFALSE";
+  // const css = x
+  //   ? `lc-grid-http{verb} lc-grid-httpTRUE`
+  //   : "lc-grid-http{verb} lc-grid-httpFALSE";
+
+  var css = "";
+
+  switch (x) {
+    case "green":
+      css = `lc-grid-http{verb} lc-grid-httpGreen`;
+      break;
+    case "amber":
+      css = `lc-grid-http{verb} lc-grid-httpAmber`;
+      break;
+    default:
+      css = `lc-grid-http{verb} lc-grid-httpRed`;
+  }
   return <div className={css}>{verb}</div>;
 }
 const LinkCard = (props) => {

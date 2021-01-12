@@ -1,5 +1,5 @@
 ---
-id: medication
+id: Medication
 title: Medication
 sidebar_label: Medication
 version: 1.0.0
@@ -43,7 +43,6 @@ We use a variety of Code Systems to represent medications including **SNOMED dm+
       </tr>
     </table>
   </div>
-
 
 :::note
 

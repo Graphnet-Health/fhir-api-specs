@@ -25,11 +25,33 @@
 }
 
 .fullTable {
-  width:100%;
+  width: 100%;
   display: table;
   table-layout: fixed;
 }
 
+.widetable > table {
+  width: 100%;
+  display: table;
+  table-layout: fixed;
+}
+
+.widetable table th,
+.widetable table td {
+  padding: 2px;
+  padding-left: 8px;
+}
+
+.widetable > table > thead > tr > th:nth-child(1) {
+  width: 40%;
+}
+
+.widetable > table > tbody > tr > td:nth-child(1) {
+  font-family: consolas;
+  font-size: 0.9rem;
+  font-weight: 900;
+}
+
 .fullTableTH {
-  width:20%;
+  width: 20%;
 }
