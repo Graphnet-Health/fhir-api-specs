@@ -9,7 +9,7 @@ function compare(a, b) {
 }
 
 function linkString(x) {
-  return "/docs/api/" + x;
+  return "/docs/api/api" + x;
 }
 
 function displayStatus(x, verb) {
