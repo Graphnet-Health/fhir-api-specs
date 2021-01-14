@@ -19,7 +19,22 @@ module.exports = {
     {
       type: "category",
       label: "FHIR APIs",
-      items: ["api/apiOverview"],
+      items: [
+        "api/apiOverview",
+        {
+          Resources: [
+            {
+              Patient: ["api/apiPatient"],
+              Observation: [
+                "api/apiObservation",
+                "api/apiObservationPOST",
+                "api/apiObservationPUT",
+                "api/apiObservationDELETE",
+              ],
+            },
+          ],
+        },
+      ],
     },
   ],
   trial: [
