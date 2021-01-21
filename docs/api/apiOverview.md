@@ -6,7 +6,7 @@ sidebar_label: API Overview
 
 import LinkCard from '@site/src/components/LinkCard';
 
-The Graphnet FHIR APIs make use of the [FHIR STU3](http://hl7.org/fhir/STU3/index.html) CareConnect profiles developed by the [INTEROPen](https://www.interopen.org/) community where possible. On occassion, Graphnet specific profiles have been used so as to make provision for extensions that are not part of the CareConnect profiles.
+The Graphnet FHIR APIs make use of the [FHIR STU3](http://hl7.org/fhir/STU3/index.html) CareConnect profiles developed by the [INTEROPen](https://www.interopen.org/) community where possible. On occasion, Graphnet specific profiles have been used so as to make provision for extensions that are not part of the CareConnect profiles.
 
 When Graphnet specific profiles are used, the rationale for the profile is documented within this API guide.
 
