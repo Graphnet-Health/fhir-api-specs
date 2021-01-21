@@ -4,24 +4,14 @@ title: API Overview
 sidebar_label: API Overview
 ---
 
-You can write content using [GitHub-flavored Markdown syntax](https://github.github.com/gfm/).
+import LinkCard from '@site/src/components/LinkCard';
 
-## Markdown Syntax
+The Graphnet FHIR APIs make use of the [FHIR STU3](http://hl7.org/fhir/STU3/index.html) CareConnect profiles developed by the [INTEROPen](https://www.interopen.org/) community where possible. On occassion, Graphnet specific profiles have been used so as to make provision for extensions that are not part of the CareConnect profiles.
 
-To serve as an example page when styling markdown based Docusaurus sites.
+When Graphnet specific profiles are used, the rationale for the profile is documented within this API guide.
 
-## Headers
+The profiles are available from the [online profile repository](https://fhir.hl7.org.uk/) hosted by [HL7 UK](https://www.hl7.org.uk/)
 
-# H1 - Create the best documentation
+The profiles used by the Graphnet APIs are detailed below.
 
-## H2 - Create the best documentation
-
-### H3 - Create the best documentation
-
-#### H4 - Create the best documentation
-
-##### H5 - Create the best documentation
-
-###### H6 - Create the best documentation
-
----
+<LinkCard/>
