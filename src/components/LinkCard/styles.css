@@ -32,7 +32,7 @@
 .lc-grid-resourceName {
   grid-column: 1/1;
   font-size: 1.3rem;
-  color: black;
+  color: var(--ifm-font-color-base);
 }
 
 .lc-grid-httpGET {
