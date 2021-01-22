@@ -37,6 +37,13 @@ module.exports = {
       ],
     },
   ],
+  examples: [
+    {
+      type: "category",
+      label: "FHIR Examples",
+      items: ["examples/exampleOverview"],
+    },
+  ],
   trial: [
     {
       type: "category",
@@ -45,16 +52,16 @@ module.exports = {
         "profiles/profileOverview",
         {
           Profiles: [
-            "profiles/AllergyIntolerance",
-            "profiles/Condition",
-            "profiles/Encounter",
-            "profiles/Immunization",
-            "profiles/Medication",
-            "profiles/MedicationStatement",
-            "profiles/MedicationRequest",
+            // "profiles/AllergyIntolerance",
+            // "profiles/Condition",
+            // "profiles/Encounter",
+            // "profiles/Immunization",
+            // "profiles/Medication",
+            // "profiles/MedicationStatement",
+            // "profiles/MedicationRequest",
             "profiles/Observation",
             "profiles/Patient",
-            "profiles/Procedure",
+            // "profiles/Procedure",
           ],
         },
         {

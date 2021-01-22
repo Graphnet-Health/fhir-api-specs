@@ -32,6 +32,12 @@ module.exports = {
           label: "Profiles",
           position: "left",
         },
+        {
+          to: "docs/examples/exampleOverview",
+          activeBasePath: "docs",
+          label: "Examples",
+          position: "left",
+        },
       ],
     },
     footer: {
@@ -96,7 +102,7 @@ module.exports = {
       //   profile:
       //     "https://fhir.hl7.org.uk/STU3/StructureDefinition/CareConnect-Immunization-1",
       //   get: "green",
-      //   post: "red",
+      //   post: "amber",
       //   put: "red",
       //   delete: "red",
       // },

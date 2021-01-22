@@ -8,11 +8,25 @@ sidebar_label: GET Patient
 
 The Graphnet FHIR API is intended to be used as a patient centric API and as such all FHIR APIs are targetted on a patient.
 
-The **Patient** API can be used to retrieve demographics information for a patine or as a means to discover the `Patient.id` so other FHIR APIs can be used.
+The `Patient` API can be used to retrieve demographics information for a patient or as a means to discover the `Patient.id` so other FHIR APIs can be used.
 
 Patients cannot be created, deleted or updated using the FHIR APIs. There are a number of different ways for searching for patients, these are described below.
 
 ## Patient Retrieval
+
+### id
+
+The `Patient` resource can be retrieved directly if the `id` of the resource is known. By appending the `id` to the url will cause the `Patient` resource to be retrieved. Unlike all other retrieval queries the response will be a single resource as opposed to a `Bundle`
+
+```http
+GET /Patient/{id}
+```
+
+An alternative method for retrieval is to make use of the `_id` search parameter. In this case, the result will be a `Bundle`. If the `id` is present the `Bundle` will contain a single `Patient` resource, otherwise the `Bundle` will be empty.
+
+```http
+GET /Patient?_id={id}
+```
 
 ## Query Parameters
 
@@ -38,7 +52,7 @@ GET /Patient?family=Jones
 ```
 
 To improve searching the API supports the use of a number of different search modifiers.
-The ones supported for 'family'are as below:
+The ones supported for `family` are as below:
 
 | Modifier | Description                                                                   |
 | -------- | ----------------------------------------------------------------------------- |
@@ -53,7 +67,7 @@ GET /Patient?family:contains=anders
 
 :::tip
 
-For more information on using FHIR search modifiers take a look at the FHIR STU3 standard at http://hl7.org/fhir/STU3/search.html#string
+For more information on using FHIR search modifiers for strings, take a look at the FHIR STU3 standard at http://hl7.org/fhir/STU3/search.html#string
 
 :::
 
@@ -71,7 +85,7 @@ The ones supported are as below:
 | Modifier | Description                                                                  |
 | -------- | ---------------------------------------------------------------------------- |
 | exact    | Returns given names that are exactly as per the search term (case sensitive) |
-| contains | Returns given names that contains the search terms somewhere within it       |
+| contains | Returns given names that contain the search terms somewhere within it        |
 
 ```http
 GET /Patient?given:exact=Johnathon
@@ -81,16 +95,19 @@ GET /Patient?given:contains=John
 
 :::tip
 
-For more information on using FHIR search modifiers take a look at the FHIR STU3 standard at http://hl7.org/fhir/STU3/search.html#string
+For more information on using FHIR search modifiers for strings, take a look at the FHIR STU3 standard at http://hl7.org/fhir/STU3/search.html#string
 
 :::
 
 ### Gender
 
-To find patients using their gender the `gender` search parameter can be used
+To find patients using their gender the `gender` search parameter can be used.
 
 ```http
-GET /Patient?gender=1985-06-01
+GET /Patient?gender=female
+GET /Patient?gender=male
+GET /Patient?gender=other
+GET /Patient?gender=unknown
 ```
 
 ### Date of Birth
@@ -124,10 +141,18 @@ GET /Patient?birthDate=EQ1985-06-01
 
 :::tip
 
-For more information on using FHIR search modifiers take a look at the FHIR STU3 standard at http://hl7.org/fhir/STU3/search.html#date
+For more information on using FHIR search modifiers for dates, take a look at the FHIR STU3 standard at http://hl7.org/fhir/STU3/search.html#date
 
 :::
 
-```
+## Sort Parameters
 
+The default sort order for `observation` records is in decending date order (e.g. most current first).
+The following sort parameters are also available.
+
+### Last Updated
+
+```http
+GET /Patient?_sort=_lastUpdated
+GET /Patient?_sort=-_lastUpdated
 ```

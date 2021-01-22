@@ -1,6 +1,6 @@
 ---
 id: Observation
-title: observation
+title: Observation
 sidebar_label: Observation
 ---
 
