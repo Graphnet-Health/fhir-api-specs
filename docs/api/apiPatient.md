@@ -156,3 +156,7 @@ The following sort parameters are also available.
 GET /Patient?_sort=_lastUpdated
 GET /Patient?_sort=-_lastUpdated
 ```
+
+## Examples
+
+Example of payloads in bith XML and JSON format are available from the [examples section](../examples/exampleOverview) of this site.

@@ -41,7 +41,7 @@ module.exports = {
     {
       type: "category",
       label: "FHIR Examples",
-      items: ["examples/exampleOverview"],
+      items: ["examples/exampleOverview", "examples/examplePatient"],
     },
   ],
   trial: [
