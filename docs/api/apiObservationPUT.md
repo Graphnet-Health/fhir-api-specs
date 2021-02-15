@@ -2,16 +2,21 @@
 id: apiObservationPUT
 title: PUT Observation
 sidebar_label: PUT Observation
+hide_table_of_contents: true
 ---
 
-import LinkCard from '@site/src/components/LinkCard';
+## Overview
 
-The Graphnet FHIR APIs make use of the [FHIR STU3](http://hl7.org/fhir/STU3/index.html) CareConnect profiles developed by the [INTEROPen](https://www.interopen.org/) community where possible. On occassion, Graphnet specific profiles have been used so as to make provision for extensions that are not part of the CareConnect profiles.
+The **Observation** API can be used to delete observation records for a patient. These must always be performed against specific `Observation` records using the `id` field of the record to be deleted.
 
-When Graphnet specific profiles are used, the rationale for the profile is documented within this API guide.
+```http
+DELETE /Observation/{id}
+```
 
-The profiles are available from the [online profile repository](https://fhir.hl7.org.uk/) hosted by [HL7 UK](https://www.hl7.org.uk/)
+:::warning
+Should we include ETag validation - if so would it be optional or mandatory?
+:::
 
-The profiles used by the Graphnet APIs are detailed below.
-
-<LinkCard/>
+:::warning
+Testing of "client id" deletes to be performed plus supporting text to describe this.
+:::

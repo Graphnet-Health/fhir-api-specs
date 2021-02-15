@@ -17,7 +17,7 @@ The **Observation** API can be used to retrieve observation records for a patien
 
 ## Observation Retrieval
 
-### id
+### id and \_id
 
 The `Observation` resource can be retrieved directly if the `id` of the resource is known. By appending the `id` to the url will cause the `Observation` resource to be retrieved. Unlike all other retrieval queries, the response will be a single resource as opposed to a `Bundle`
 
@@ -25,7 +25,7 @@ The `Observation` resource can be retrieved directly if the `id` of the resource
 GET /Observation/{id}
 ```
 
-An alternative method for retrieval is to make use of the `_id` search parameter. In this case, the result will be a `Bundle`. If the `id` is present the `Bundle` will contain a single `Observation` resource, otherwise the `Bundle` will be empty.
+An alternative method for retrieval is to make use of the `_id` search parameter. In this case, the result will be a `Bundle`. If the `id` is present the `Bundle` will contain a single `Observation` resource, otherwise, the `Bundle` will be empty.
 
 ```http
 GET /Observation?_id={id}
@@ -38,27 +38,146 @@ Unless retrieving an `Observation` resource by the use of `id` then the `subject
 ### Subject
 
 ```http
-GET /Patient?identifier={system}|{value}
+GET /Observation?patient=Patient/{id}
 ```
 
 When searching for NHS Numbers then use the system `https://fhir.nhs.uk/Id/nhs-number`
 For example
 
 ```http
-GET /Patient?identifier=https://fhir.nhs.uk/Id/nhs-number|1234567890
+GET /Observation?patient.identifier=https://fhir.nhs.uk/Id/nhs-number|1234567890
 ```
+
+All the search examples shown below will accept the patient parameter in either form.
 
 ### Code
 
+When searching for observations with a specific code then the query can be constructed using different combinations of the code system and the code value.
+
+```http
+GET /Observation?patient=[value]&code=[code]
+GET /Observation?patient=[value]&code=[system]|[code]
+GET /Observation?patient=[value]&code=|[code]
+GET /Observation?patient=[value]&code=[system]|
+GET /Observation?patient=[value]&code:text=[value]
+```
+
+For example to search for a BMI observation using SNOMED then a query would look like the following.
+
+```http
+GET /Observation?patient=[value]&code=http://snomed.info/sct|60621009
+```
+
+:::tip
+For further information consult the FHIR specification at http://hl7.org/fhir/STU3/search.html#token
+:::
+
+In addition to searching for observations with single codes, it is possible to construct a search using a predefined `ValueSet` that defines a collection of codes.
+
+```http
+GET /Observation?patient=[value]&code:in=[value set url]
+```
+
+:::note
+The `ValueSets` that are available for this functionality will evolve over time. Speak to Graphnet if you intended to use this capability.
+:::
+
 ### Date
 
-To find patients using their given name (aka Forename) the `given` search parameter can be used.
+To search on the date an observation was made the following search constructs can be used.
+
+```http
+GET /Observation?patient=[value]&date=[value]
+GET /Observation?patient=[value]&date=eq[value]
+GET /Observation?patient=[value]&date=ne[value]
+GET /Observation?patient=[value]&date=le[value]
+GET /Observation?patient=[value]&date=ge[value]
+GET /Observation?patient=[value]&date=lt[value]
+GET /Observation?patient=[value]&date=gt[value]
+```
+
+So to search for an observation on 23rd January 2021 the query would be
+
+```http
+GET /Observation?patient=[value]&date=2021-01-23
+```
+
+To search for all observations before the 23rd December 2020, the following could be used
+
+```http
+GET /Observation?patient=[value]&date=lt2020-12-23
+```
 
 ### Identifiers
 
+To search for observations using identifiers present on the observation record, the following can be used
+
+```http
+GET /Observation?patient=[value]&identifier=[code]
+GET /Observation?patient=[value]&identifier=[system]|[code]
+GET /Observation?patient=[value]&identifier=|[code]
+GET /Observation?patient=[value]&identifier=[system]|
+
+```
+
+For example
+
+```http
+GET /Observation?patient=[value]&identifier=http://acme.org/obsdata|21323-123213
+```
+
+:::tip
+For further information consult the FHIR specification at http://hl7.org/fhir/STU3/search.html#token
+:::
+
 ### Status
 
+The Observation FHIR query currently only accepts records with a status of `final`. The search parameter is a placeholder for future developments.
+
+```http
+GET /Observation?patient={id}&encounter=final
+```
+
 ### Encounter
+
+If the observation record was recorded with information relating to the clinical encounter that it was part of, then it can be retrieved using the encounter id.
+
+```http
+GET /Observation?patient={id}&encounter={id}
+```
+
+### \_lastUpdated
+
+To retrieve observations based on the updated date of the record
+
+```http
+GET /Observation?patient={id}&status={code}
+```
+
+:::important
+Need to check how this was implemented (were modifiers used?)
+:::
+
+### \_summary
+
+Adding the `_summary=count` query parameter will change the behaviour of the query to return just the count of records, rather than the records themselves.
+
+```http
+GET /Observation?patient={id}&_summary=count
+```
+
+will return a response along the lines of
+
+```javascript
+{
+    "resourceType": "Bundle",
+    "type": "searchset",
+    "total": 15,
+    "id": "df23fd8b-d30c-47c6-a2bd-64c8a24b1166"
+}
+```
+
+This can be added to any query construct.
 
 ## Sort Parameters
 
@@ -68,6 +187,18 @@ The following sort parameters are also available.
 ### Date
 
 ```http
-GET /Patient?_sort=date
-GET /Patient?_sort=-date
+GET /Observation?_sort=date
+GET /Observation?_sort=-date
 ```
+
+## Paging
+
+### \_count
+
+```http
+GET /Observation?patient={id}&status={code}
+```
+
+## Examples
+
+Example of payloads in both XML and JSON format are available from the [examples section](../examples/exampleOverview) of this site.
