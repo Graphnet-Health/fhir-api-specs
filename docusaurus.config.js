@@ -7,13 +7,24 @@ module.exports = {
   organizationName: "facebook", // Usually your GitHub org/user name.
   projectName: "docusaurus", // Usually your repo name.
   themeConfig: {
+    // prism: {
+    //   additionalLanguages: ["c"],
+    // },
+    announcementBar: {
+      id: "supportus-new",
+      content:
+        '<span class="text-white">🚧 Development Version - Not for use 🚧</span>',
+    },
     navbar: {
       title: "CareCentric FHIR API",
       logo: {
         alt: "My Site Logo",
         src: "img/Graphnet-Logo-500px.png",
       },
-      links: [
+      // prism: {
+      //   additionalLanguages: ["powershell"],
+      // },
+      items: [
         {
           to: "docs/",
           activeBasePath: "docs",
@@ -96,6 +107,10 @@ module.exports = {
     },
   },
   customFields: {
+    jira: {
+      display: true,
+      base: "https://jira.systemc.com/browse/",
+    },
     resources: [
       // {
       //   type: "Immunization",

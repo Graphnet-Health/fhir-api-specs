@@ -4,6 +4,8 @@ title: FHIR Patient
 sidebar_label: GET Patient
 ---
 
+import JiraTag from '@site/src/components/JiraTag';
+
 ## Overview
 
 The Graphnet FHIR API is intended to be used as a patient centric API and as such all FHIR APIs are targetted on a patient.
@@ -17,12 +19,14 @@ Patients cannot be created, deleted or updated using the FHIR APIs. There are a 
 ### id
 
 The `Patient` resource can be retrieved directly if the `id` of the resource is known. By appending the `id` to the url will cause the `Patient` resource to be retrieved. Unlike all other retrieval queries the response will be a single resource as opposed to a `Bundle`
+<JiraTag id="GBF-625"/>
 
 ```http
 GET /Patient/{id}
 ```
 
 An alternative method for retrieval is to make use of the `_id` search parameter. In this case, the result will be a `Bundle`. If the `id` is present the `Bundle` will contain a single `Patient` resource, otherwise the `Bundle` will be empty.
+<JiraTag id="GBF-626"/>
 
 ```http
 GET /Patient?_id={id}
@@ -30,7 +34,7 @@ GET /Patient?_id={id}
 
 ## Query Parameters
 
-### NHS Number & Local identifiers
+### NHS Number & Local Identifiers
 
 ```http
 GET /Patient?identifier={system}|{value}
@@ -74,6 +78,7 @@ For more information on using FHIR search modifiers for strings, take a look at 
 ### Given Name
 
 To find patients using their given name (aka Forename) the `given` search parameter can be used.
+<JiraTag id="GBF-598"/>
 
 ```http
 GET /Patient?given=Sarah
@@ -102,6 +107,7 @@ For more information on using FHIR search modifiers for strings, take a look at 
 ### Gender
 
 To find patients using their gender the `gender` search parameter can be used.
+<JiraTag id="GBF-622"/><JiraTag id="GBF-597"/>
 
 ```http
 GET /Patient?gender=female
@@ -113,6 +119,7 @@ GET /Patient?gender=unknown
 ### Date of Birth
 
 To find patients using their date of birth the `birthDate` search parameter can be used
+<JiraTag id="GBF-624"/><JiraTag id="GBF-623"/>
 
 ```http
 GET /Patient?birthDate=1985-06-01
@@ -147,8 +154,9 @@ For more information on using FHIR search modifiers for dates, take a look at th
 
 ## Sort Parameters
 
-The default sort order for `observation` records is in decending date order (e.g. most current first).
+The default sort order for `observation` records is in descending date order (e.g. most current first).
 The following sort parameters are also available.
+<JiraTag id="GBF-627"/>
 
 ### Last Updated
 
@@ -159,4 +167,4 @@ GET /Patient?_sort=-_lastUpdated
 
 ## Examples
 
-Example of payloads in bith XML and JSON format are available from the [examples section](../examples/exampleOverview) of this site.
+Example of payloads in both XML and JSON format are available from the [examples section](../examples/exampleOverview) of this site.
