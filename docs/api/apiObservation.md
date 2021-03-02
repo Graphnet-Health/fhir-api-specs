@@ -10,7 +10,7 @@ The **Observation** API can be used to retrieve observation records for a patien
 
 `Observation` records can be created, updated, queried and deleted using this API.
 
-- Retrieving of searching for `Observation` records is performed using a [HTTP GET](4) described below.
+- Retrieving of searching for `Observation` records is performed using a [HTTP GET] described below.
 - Adding new `Observation` records is performed using a [HTTP POST](apiObservationPOST)
 - Updating existing `Observation` records is performed using a [HTTP PUT](apiObservationPUT)
 - Deleting existing `Observation` records is performed using a [HTTP DELETE](apiObservationDELETE)
