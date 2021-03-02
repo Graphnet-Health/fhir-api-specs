@@ -1,36 +1,42 @@
-import React from 'react';
-import clsx from 'clsx';
-import Layout from '@theme/Layout';
-import Link from '@docusaurus/Link';
-import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
-import useBaseUrl from '@docusaurus/useBaseUrl';
-import styles from './styles.module.css';
+import React from "react";
+import clsx from "clsx";
+import Layout from "@theme/Layout";
+import Link from "@docusaurus/Link";
+import useDocusaurusContext from "@docusaurus/useDocusaurusContext";
+import useBaseUrl from "@docusaurus/useBaseUrl";
+import styles from "./styles.module.css";
 
 const features = [
   {
-    title: <>heading one</>,
-    imageUrl: 'img/undraw_docusaurus_mountain.svg',
+    title: "Documentation",
+    imageUrl: "img/documentation.png",
+    target: "/docs",
     description: (
       <>
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit. In ac euismod odio, eu consequat dui. Nullam molestie consectetur risus id imperdiet
+        Documentation on how to use the FHIR APIs, including authentication and
+        the onboarding processes required.
       </>
     ),
   },
   {
-    title: <>heading two</>,
-    imageUrl: 'img/undraw_docusaurus_tree.svg',
+    title: "FHIR API",
+    imageUrl: "img/apiCloud.png",
+    target: "docs/api/apiOverview",
     description: (
       <>
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit. In ac euismod odio, eu consequat dui. Nullam molestie consectetur risus id imperdiet
+        A description of the specific FHIR APIs that have been implemented as
+        part of the Graphnet CareCentic system.
       </>
     ),
   },
   {
-    title: <>heading 3t</>,
-    imageUrl: 'img/undraw_docusaurus_react.svg',
+    title: "FHIR Profiles",
+    imageUrl: "img/profile.png",
+    target: "docs/profiles/profileOverview",
     description: (
       <>
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit. In ac euismod odio, eu consequat dui. Nullam molestie consectetur risus id imperdiet.
+        Details of the FHIR profiles that have been used within the Graphnet
+        FHIR APIs, including extension and terminology bindings.
       </>
     ),
   },
@@ -39,7 +45,7 @@ const features = [
 function Feature({ imageUrl, title, description }) {
   const imgUrl = useBaseUrl(imageUrl);
   return (
-    <div className={clsx('col col--4', styles.feature)}>
+    <div className={clsx("col col--4", styles.feature)}>
       {imgUrl && (
         <div className="text--center">
           <img className={styles.featureImage} src={imgUrl} alt={title} />
@@ -57,8 +63,9 @@ function Home() {
   return (
     <Layout
       title={`Hello from ${siteConfig.title}`}
-      description="Description will go into a meta tag in <head />">
-      <header className={clsx('hero hero--primary', styles.heroBanner)}>
+      description="Description will go into a meta tag in <head />"
+    >
+      <header className={clsx("hero hero--primary", styles.heroBanner)}>
         <div className="container">
           <img src={siteConfig.themeConfig.navbar.logo.src} />
           <h1 className="hero__title">{siteConfig.title}</h1>
@@ -68,10 +75,11 @@ function Home() {
           <div className={styles.buttons}>
             <Link
               className={clsx(
-                'button button--outline button--secondary button--lg',
-                styles.getStarted,
+                "button button--outline button--secondary button--lg",
+                styles.getStarted
               )}
-              to={useBaseUrl('docs/')}>
+              to={useBaseUrl("docs/")}
+            >
               Get Started
             </Link>
           </div>
