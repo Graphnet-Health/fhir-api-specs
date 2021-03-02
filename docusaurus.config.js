@@ -3,6 +3,8 @@ module.exports = {
   tagline: "FHIR API guide for CareCentric",
   url: "https://your-docusaurus-test-site.com",
   baseUrl: "/",
+  onBrokenLinks: "throw",
+  onBrokenMarkdownLinks: "warn",
   favicon: "img/favicon.png",
   organizationName: "facebook", // Usually your GitHub org/user name.
   projectName: "docusaurus", // Usually your repo name.
@@ -18,7 +20,7 @@ module.exports = {
     navbar: {
       title: "CareCentric FHIR API",
       logo: {
-        alt: "My Site Logo",
+        alt: "Graphnet Health Logo",
         src: "img/Graphnet-Logo-500px.png",
       },
       // prism: {
@@ -75,14 +77,14 @@ module.exports = {
         {
           title: "Community",
           items: [
-            {
-              label: "Stack Overflow",
-              href: "https://stackoverflow.com/questions/tagged/docusaurus",
-            },
-            {
-              label: "Discord",
-              href: "https://discordapp.com/invite/docusaurus",
-            },
+            // {
+            //   label: "Stack Overflow",
+            //   href: "https://stackoverflow.com/questions/tagged/docusaurus",
+            // },
+            // {
+            //   label: "Discord",
+            //   href: "https://discordapp.com/invite/docusaurus",
+            // },
             {
               label: "Twitter",
               href: "https://twitter.com/docusaurus",
@@ -201,7 +203,7 @@ module.exports = {
       {
         docs: {
           // It is recommended to set document id as docs home page (`docs/` path).
-          homePageId: "api_introduction",
+          // homePageId: "api_introduction",
           sidebarPath: require.resolve("./sidebars.js"),
           // Please change this to your repo.
           // editUrl:

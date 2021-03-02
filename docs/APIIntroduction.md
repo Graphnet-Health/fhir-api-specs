@@ -1,6 +1,7 @@
 ---
 id: api_introduction
 title: API Introduction
+slug: /
 ---
 
 This developer portal also allows developers to sign up, and test API calls directly against a sandpit environment. This environment has sample data in it, so no patient information is exposed to developers testing in this way.
