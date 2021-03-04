@@ -6,11 +6,11 @@ sidebar_label: GET Observation
 
 ## Overview
 
-The **Observation** API can be used to retrieve observation records for a patient. When querying for data it must always be in the context of a single patient.
+The **Observation** API can be used to interactwith observation records for a patient. When querying for data it must always be in the context of a single patient.
 
 `Observation` records can be created, updated, queried and deleted using this API.
 
-- Retrieving of searching for `Observation` records is performed using a [HTTP GET] described below.
+- Retrieving of searching for `Observation` records is performed using a HTTP GET described below.
 - Adding new `Observation` records is performed using a [HTTP POST](apiObservationPOST)
 - Updating existing `Observation` records is performed using a [HTTP PUT](apiObservationPUT)
 - Deleting existing `Observation` records is performed using a [HTTP DELETE](apiObservationDELETE)
@@ -181,7 +181,7 @@ This can be added to any query construct.
 
 ## Sort Parameters
 
-The default sort order for `observation` records is in decending date order (e.g. most current first).
+The default sort order for `observation` records is in descending date order (i.e. most current first).
 The following sort parameters are also available.
 
 ### Date
@@ -201,4 +201,4 @@ GET /Observation?patient={id}&status={code}
 
 ## Examples
 
-Example of payloads in both XML and JSON format are available from the [examples section](../examples/exampleOverview) of this site.
+Example of payloads in both XML and JSON formats are available from the [examples section](../examples/exampleOverview) of this site.

@@ -13,6 +13,10 @@ The **Observation** API can be used to delete observation records for a patient.
 DELETE /Observation/{id}
 ```
 
+:::info
+Conditional deletes were not explicitly requested, how does VONK treat them?
+:::
+
 :::warning
 Should we include ETag validation - if so would it be optional or mandatory?
 :::

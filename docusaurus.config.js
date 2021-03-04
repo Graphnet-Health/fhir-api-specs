@@ -51,6 +51,12 @@ module.exports = {
           label: "Examples",
           position: "left",
         },
+        {
+          to: "docs/version-history/releases",
+          activeBasePath: "docs",
+          label: "Version 0.0.1",
+          position: "right",
+        },
       ],
     },
     footer: {
@@ -77,17 +83,17 @@ module.exports = {
         {
           title: "Community",
           items: [
-            // {
-            //   label: "Stack Overflow",
-            //   href: "https://stackoverflow.com/questions/tagged/docusaurus",
-            // },
-            // {
-            //   label: "Discord",
-            //   href: "https://discordapp.com/invite/docusaurus",
-            // },
             {
               label: "Twitter",
               href: "https://twitter.com/docusaurus",
+            },
+            {
+              label: "INTEROPen",
+              href: "https://www.interopen.org/",
+            },
+            {
+              label: "HL7 UK",
+              href: "https://www.hl7.org.uk/",
             },
           ],
         },
@@ -109,6 +115,7 @@ module.exports = {
     },
   },
   customFields: {
+    version: "0.0.1",
     jira: {
       display: true,
       base: "https://jira.systemc.com/browse/",

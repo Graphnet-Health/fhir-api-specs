@@ -107,7 +107,6 @@ For more information on using FHIR search modifiers for strings, take a look at 
 ### Gender
 
 To find patients using their gender the `gender` search parameter can be used.
-<JiraTag id="GBF-622"/><JiraTag id="GBF-597"/>
 
 ```http
 GET /Patient?gender=female

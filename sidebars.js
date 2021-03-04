@@ -11,9 +11,9 @@ module.exports = {
         "authorisation/national_auth",
       ],
     },
-    "fhir_apis",
-    "cc_apis",
-    "cc_data_sub_apis",
+    // "fhir_apis",
+    // "cc_apis",
+    // "cc_data_sub_apis",
   ],
   api: [
     {
@@ -41,7 +41,11 @@ module.exports = {
     {
       type: "category",
       label: "FHIR Examples",
-      items: ["examples/exampleOverview", "examples/examplePatient"],
+      items: [
+        "examples/exampleOverview",
+        "examples/examplePatient",
+        "examples/exampleObservation-1",
+      ],
     },
   ],
   trial: [
