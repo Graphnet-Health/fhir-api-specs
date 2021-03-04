@@ -69,16 +69,6 @@ module.exports = {
       links: [
         {
           title: "Docs",
-          items: [
-            {
-              label: "Style Guide",
-              to: "docs/",
-            },
-            {
-              label: "Second Doc",
-              to: "docs/doc2/",
-            },
-          ],
         },
         {
           title: "Community",
@@ -99,16 +89,6 @@ module.exports = {
         },
         {
           title: "More",
-          items: [
-            {
-              label: "Blog",
-              to: "blog",
-            },
-            {
-              label: "GitHub",
-              href: "https://github.com/facebook/docusaurus",
-            },
-          ],
         },
       ],
       copyright: `Copyright © ${new Date().getFullYear()} Graphnet Health Limited.`,
