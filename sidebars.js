@@ -68,12 +68,12 @@ module.exports = {
             // "profiles/Procedure",
           ],
         },
-        {
-          Extensions: [
-            "resources/extLastIssueDate",
-            "resources/extPrescriptionType",
-          ],
-        },
+        // {
+        //   Extensions: [
+        //     "resources/extLastIssueDate",
+        //     "resources/extPrescriptionType",
+        //   ],
+        // },
       ],
     },
   ],
