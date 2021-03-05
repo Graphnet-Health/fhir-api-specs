@@ -3,7 +3,7 @@ module.exports = {
   tagline: "FHIR API guide for CareCentric",
   url: "https://your-docusaurus-test-site.com",
   baseUrl: "/",
-  onBrokenLinks: "throw",
+  onBrokenLinks: "warn",
   onBrokenMarkdownLinks: "warn",
   favicon: "img/favicon.png",
   organizationName: "facebook", // Usually your GitHub org/user name.
