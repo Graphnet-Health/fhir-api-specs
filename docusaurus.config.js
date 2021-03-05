@@ -54,7 +54,7 @@ module.exports = {
         {
           to: "docs/version-history/releases",
           activeBasePath: "docs",
-          label: "Version 0.0.1",
+          label: "Version 0.1.0",
           position: "right",
         },
       ],
@@ -95,21 +95,21 @@ module.exports = {
     },
   },
   customFields: {
-    version: "0.0.1",
+    version: "0.1.0",
     jira: {
       display: true,
       base: "https://jira.systemc.com/browse/",
     },
     resources: [
-      // {
-      //   type: "Immunization",
-      //   profile:
-      //     "https://fhir.hl7.org.uk/STU3/StructureDefinition/CareConnect-Immunization-1",
-      //   get: "green",
-      //   post: "amber",
-      //   put: "red",
-      //   delete: "red",
-      // },
+      {
+        type: "Immunization",
+        profile:
+          "https://fhir.hl7.org.uk/STU3/StructureDefinition/CareConnect-Immunization-1",
+        get: "green",
+        post: "amber",
+        put: "amber",
+        delete: "amber",
+      },
       {
         type: "Observation",
         profile:
@@ -128,60 +128,60 @@ module.exports = {
         put: "red",
         delete: "red",
       },
-      // {
-      //   type: "Encounter",
-      //   profile:
-      //     "https://fhir.hl7.org.uk/STU3/StructureDefinition/CareConnect-Encounter-1",
-      //   get: "green",
-      //   post: "red",
-      //   put: "red",
-      //   delete: "red",
-      // },
-      // {
-      //   type: "Condition",
-      //   profile:
-      //     "https://fhir.hl7.org.uk/STU3/StructureDefinition/CareConnect-Condition-1",
-      //   get: "green",
-      //   post: "amber",
-      //   put: "amber",
-      //   delete: "amber",
-      // },
-      // {
-      //   type: "Procedure",
-      //   profile:
-      //     "https://fhir.hl7.org.uk/STU3/StructureDefinition/CareConnect-Procedure-1",
-      //   get: "green",
-      //   post: "amber",
-      //   put: "amber",
-      //   delete: "amber",
-      // },
-      // {
-      //   type: "AllergyIntolerance",
-      //   profile:
-      //     "https://fhir.hl7.org.uk/STU3/StructureDefinition/CareConnect-AllergyIntolerance-1",
-      //   get: "green",
-      //   post: "amber",
-      //   put: "amber",
-      //   delete: "amber",
-      // },
-      // {
-      //   type: "MedicationStatement",
-      //   profile:
-      //     "https://fhir.graphnethealth.com/STU3/StructureDefinition/MedicationStatement",
-      //   get: "green",
-      //   post: "amber",
-      //   put: "amber",
-      //   delete: "amber",
-      // },
-      // {
-      //   type: "MedicationRequest",
-      //   profile:
-      //     "https://fhir.graphnethealth.com/STU3/StructureDefinition/MedicationRequest",
-      //   get: "green",
-      //   post: "red",
-      //   put: "red",
-      //   delete: "red",
-      // },
+      {
+        type: "Encounter",
+        profile:
+          "https://fhir.hl7.org.uk/STU3/StructureDefinition/CareConnect-Encounter-1",
+        get: "green",
+        post: "red",
+        put: "red",
+        delete: "red",
+      },
+      {
+        type: "Condition",
+        profile:
+          "https://fhir.hl7.org.uk/STU3/StructureDefinition/CareConnect-Condition-1",
+        get: "green",
+        post: "amber",
+        put: "amber",
+        delete: "amber",
+      },
+      {
+        type: "Procedure",
+        profile:
+          "https://fhir.hl7.org.uk/STU3/StructureDefinition/CareConnect-Procedure-1",
+        get: "green",
+        post: "amber",
+        put: "amber",
+        delete: "amber",
+      },
+      {
+        type: "AllergyIntolerance",
+        profile:
+          "https://fhir.hl7.org.uk/STU3/StructureDefinition/CareConnect-AllergyIntolerance-1",
+        get: "green",
+        post: "amber",
+        put: "amber",
+        delete: "amber",
+      },
+      {
+        type: "MedicationStatement",
+        profile:
+          "https://fhir.graphnethealth.com/STU3/StructureDefinition/MedicationStatement",
+        get: "green",
+        post: "amber",
+        put: "amber",
+        delete: "amber",
+      },
+      {
+        type: "MedicationRequest",
+        profile:
+          "https://fhir.graphnethealth.com/STU3/StructureDefinition/MedicationRequest",
+        get: "green",
+        post: "red",
+        put: "red",
+        delete: "red",
+      },
     ],
   },
   presets: [
