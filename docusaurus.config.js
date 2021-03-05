@@ -182,6 +182,24 @@ module.exports = {
         put: "red",
         delete: "red",
       },
+      {
+        type: "QuestionnaireResponse",
+        profile:
+          "https://fhir.graphnethealth.com/STU3/StructureDefinition/MedicationRequest",
+        get: "red",
+        post: "red",
+        put: "red",
+        delete: "red",
+      },
+      {
+        type: "Binary",
+        profile:
+          "https://fhir.graphnethealth.com/STU3/StructureDefinition/MedicationRequest",
+        get: "red",
+        post: "red",
+        put: "red",
+        delete: "red",
+      },
     ],
   },
   presets: [
