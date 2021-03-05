@@ -23,14 +23,21 @@ const ProfileCard = (props) => {
   const { customFields } = siteConfig;
   console.log(customFields);
 
-  const entries = customFields.resources.sort(compare).map((x) => (
-    <Link className="pc-container" to={linkString(x.type)}>
-      <div className="pc-grid-pcontainer">
-        <div className="pc-grid-presourceName">{x.type}</div>
-        <div className="pc-grid-presourceProfile">{x.profile}</div>
-      </div>
-    </Link>
-  ));
+  function gotProfile(profile) {
+    return profile.profile != "";
+  }
+
+  const entries = customFields.resources
+    .filter(gotProfile)
+    .sort(compare)
+    .map((x) => (
+      <Link className="pc-container" to={linkString(x.type)}>
+        <div className="pc-grid-pcontainer">
+          <div className="pc-grid-presourceName">{x.type}</div>
+          <div className="pc-grid-presourceProfile">{x.profile}</div>
+        </div>
+      </Link>
+    ));
 
   console.log(entries);
 
