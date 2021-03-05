@@ -185,7 +185,7 @@ module.exports = {
       {
         type: "QuestionnaireResponse",
         profile:
-          "https://fhir.graphnethealth.com/STU3/StructureDefinition/MedicationRequest",
+          "https://fhir.graphnethealth.com/STU3/StructureDefinition/QuestionnaireResponse",
         get: "red",
         post: "red",
         put: "red",
@@ -193,8 +193,7 @@ module.exports = {
       },
       {
         type: "Binary",
-        profile:
-          "https://fhir.graphnethealth.com/STU3/StructureDefinition/MedicationRequest",
+        profile: "",
         get: "red",
         post: "red",
         put: "red",
