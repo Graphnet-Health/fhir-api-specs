@@ -8,8 +8,10 @@ function compare(a, b) {
   return a.type < b.type ? -1 : 1;
 }
 
-function linkString(x) {
-  return "/docs/profiles/" + x;
+function linkString(x, active) {
+  if (active) {
+    return "/docs/profiles/" + x;
+  }
 }
 
 function displayStatus(x, verb) {
@@ -27,11 +29,16 @@ const ProfileCard = (props) => {
     return profile.profile != "";
   }
 
+  function isActive(x) {
+    const activeCss = x ? "pc-container" : "pc-containerInfo";
+    return activeCss;
+  }
+
   const entries = customFields.resources
     .filter(gotProfile)
     .sort(compare)
     .map((x) => (
-      <Link className="pc-container" to={linkString(x.type)}>
+      <Link className={isActive(x.active)} to={linkString(x.type, x.active)}>
         <div className="pc-grid-pcontainer">
           <div className="pc-grid-presourceName">{x.type}</div>
           <div className="pc-grid-presourceProfile">{x.profile}</div>

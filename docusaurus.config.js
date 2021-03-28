@@ -103,6 +103,7 @@ module.exports = {
     resources: [
       {
         type: "Immunization",
+        active: false,
         profile:
           "https://fhir.hl7.org.uk/STU3/StructureDefinition/CareConnect-Immunization-1",
         get: "amber",
@@ -112,6 +113,7 @@ module.exports = {
       },
       {
         type: "Flag",
+        active: false,
         profile:
           "https://fhir.graphnethealth.com/STU3/StructureDefinition-Flag",
         get: "red",
@@ -121,6 +123,7 @@ module.exports = {
       },
       {
         type: "DiagnosticResult",
+        active: false,
         profile:
           "https://fhir.graphnethealth.com/STU3/StructureDefinition/DiagnosticResult",
         get: "red",
@@ -130,6 +133,7 @@ module.exports = {
       },
       {
         type: "FamilyMemberHistory",
+        active: false,
         profile:
           "https://fhir.hl7.org.uk/STU3/StructureDefinition/CareConnect-FamilyMemberHistory-1",
         get: "amber",
@@ -139,6 +143,7 @@ module.exports = {
       },
       {
         type: "Observation",
+        active: true,
         profile:
           "https://fhir.hl7.org.uk/STU3/StructureDefinition/CareConnect-Observation-1",
         get: "green",
@@ -148,6 +153,7 @@ module.exports = {
       },
       {
         type: "Patient",
+        active: false,
         profile:
           "https://fhir.hl7.org.uk/STU3/StructureDefinition/CareConnect-Patient-1",
         get: "green",
@@ -157,6 +163,7 @@ module.exports = {
       },
       {
         type: "Encounter",
+        active: false,
         profile:
           "https://fhir.hl7.org.uk/STU3/StructureDefinition/CareConnect-Encounter-1",
         get: "amber",
@@ -166,6 +173,7 @@ module.exports = {
       },
       {
         type: "Condition",
+        active: false,
         profile:
           "https://fhir.hl7.org.uk/STU3/StructureDefinition/CareConnect-Condition-1",
         get: "amber",
@@ -175,6 +183,7 @@ module.exports = {
       },
       {
         type: "Procedure",
+        active: false,
         profile:
           "https://fhir.hl7.org.uk/STU3/StructureDefinition/CareConnect-Procedure-1",
         get: "amber",
@@ -184,6 +193,7 @@ module.exports = {
       },
       {
         type: "AllergyIntolerance",
+        active: false,
         profile:
           "https://fhir.hl7.org.uk/STU3/StructureDefinition/CareConnect-AllergyIntolerance-1",
         get: "amber",
@@ -193,6 +203,7 @@ module.exports = {
       },
       {
         type: "MedicationStatement",
+        active: false,
         profile:
           "https://fhir.graphnethealth.com/STU3/StructureDefinition/MedicationStatement",
         get: "amber",
@@ -202,6 +213,7 @@ module.exports = {
       },
       {
         type: "MedicationRequest",
+        active: false,
         profile:
           "https://fhir.graphnethealth.com/STU3/StructureDefinition/MedicationRequest",
         get: "amber",
@@ -211,6 +223,7 @@ module.exports = {
       },
       {
         type: "QuestionnaireResponse",
+        active: false,
         profile:
           "https://fhir.graphnethealth.com/STU3/StructureDefinition/QuestionnaireResponse",
         get: "amber",
@@ -220,6 +233,7 @@ module.exports = {
       },
       {
         type: "Binary",
+        active: false,
         profile: "",
         get: "red",
         post: "red",
