@@ -1,12 +1,21 @@
-.lc-container {
+.lc-container,
+.lc-containerInfo {
   border: 1px solid var(--ifm-color-emphasis-300);
   border-radius: var(--ifm-global-radius);
   padding: 0.325rem;
-
+  text-decoration: none;
   font-size: 1rem;
   margin-bottom: 0.25rem;
   /* max-width: 45em; */
   display: block;
+}
+
+.lc-container {
+  background-color: rgb(230, 230, 230);
+}
+
+.lc-containerInfo:hover {
+  text-decoration: none;
 }
 
 .lc-container:hover {

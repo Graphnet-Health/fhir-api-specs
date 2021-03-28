@@ -8,8 +8,10 @@ function compare(a, b) {
   return a.type < b.type ? -1 : 1;
 }
 
-function linkString(x) {
-  return "/docs/api/api" + x;
+function linkString(x, active) {
+  if (active) {
+    return "/docs/api/api" + x;
+  }
 }
 
 function displayStatus(x, verb) {
@@ -36,8 +38,13 @@ const LinkCard = (props) => {
   const { customFields } = siteConfig;
   console.log(customFields);
 
+  function isActive(x) {
+    const activeCss = x ? "lc-container" : "lc-containerInfo";
+    return activeCss;
+  }
+
   const entries = customFields.resources.sort(compare).map((x) => (
-    <Link className="lc-container" to={linkString(x.type)}>
+    <Link className={isActive(x.active)} to={linkString(x.type, x.active)}>
       <div className="lc-grid-container">
         <div className="lc-grid-resourceName">{x.type}</div>
         {displayStatus(x.get, "GET")}
