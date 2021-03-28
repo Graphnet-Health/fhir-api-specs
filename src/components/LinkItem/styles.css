@@ -1,4 +1,4 @@
-.lc-container {
+.linkItem-container {
   border: 1px solid var(--ifm-color-emphasis-300);
   border-radius: var(--ifm-global-radius);
   padding: 0.325rem;
@@ -9,59 +9,27 @@
   display: block;
 }
 
-.lc-container:hover {
-  border-color: var(--ifm-color-primary);
-  text-decoration: none;
-}
-
 .lc-title {
   font-weight: 600;
   margin-right: 0.5em;
 }
 
-.lc-description {
+.linkItem-description {
   font-size: 0.875rem;
   color: var(--ifm-font-color-secondary);
 }
 
-.lc-grid-container {
+.linkItem-grid-container {
   display: grid;
-  grid-template-columns: auto 60px 60px 60px 60px;
+  grid-template-columns: 100px auto;
 }
 
-.lc-grid-resourceName {
-  grid-column: 1/1;
-  font-size: 1.3rem;
-  color: var(--ifm-font-color-base);
+.linkItem-grid-statusText {
+  grid-column: 0/0;
+  color: var(--ifm-font-color-secondary);
 }
 
-.lc-grid-statusText {
-  grid-column: 1/1;
-  font-size: 1.1rem;
-  padding-right: 1rem;
-  color: var(--ifm-font-color-base);
-}
-
-.lc-grid-httpGET {
-  grid-column-start: 2;
-  grid-column-end: 2;
-
-  text-align: center;
-}
-.lc-grid-httpPOST {
-  grid-column-start: 3;
-  grid-column-end: 3;
-}
-.lc-grid-httpPUT {
-  grid-column-start: 4;
-  grid-column-end: 4;
-}
-.lc-grid-httpDELETE {
-  grid-column-start: 5;
-  grid-column-end: 5;
-}
-
-.lc-grid-httpGreen {
+.linkItem-grid-httpGreen {
   background-color: #8bb57b;
   border: 1px #8bb57b;
   border-radius: 6px;
@@ -73,7 +41,7 @@
   font-size: 0.8rem;
 }
 
-.lc-grid-httpAmber {
+.linkItem-grid-httpAmber {
   background-color: #f5b767;
   border: 1px #f5b767;
   border-radius: 6px;
@@ -85,7 +53,7 @@
   font-size: 0.8rem;
 }
 
-.lc-grid-httpRed {
+.linkItem-grid-httpRed {
   background-color: #d1d1d1;
   border: 1px #d1d1d1;
   border-radius: 6px;
