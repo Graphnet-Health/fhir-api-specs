@@ -18,7 +18,7 @@ module.exports = {
         '<span class="text-white">🚧 Development Version - Not for use 🚧</span>',
     },
     navbar: {
-      title: "CareCentric FHIR API",
+      title: "CareCentric FHIR API (STU3)",
       logo: {
         alt: "Graphnet Health Logo",
         src: "img/Graphnet-Logo-500px.png",
@@ -105,10 +105,37 @@ module.exports = {
         type: "Immunization",
         profile:
           "https://fhir.hl7.org.uk/STU3/StructureDefinition/CareConnect-Immunization-1",
-        get: "green",
+        get: "amber",
         post: "amber",
         put: "amber",
         delete: "amber",
+      },
+      {
+        type: "Flag",
+        profile:
+          "https://fhir.graphnethealth.com/STU3/StructureDefinition-Flag",
+        get: "red",
+        post: "red",
+        put: "red",
+        delete: "red",
+      },
+      {
+        type: "DiagnosticResult",
+        profile:
+          "https://fhir.graphnethealth.com/STU3/StructureDefinition/DiagnosticResult",
+        get: "red",
+        post: "red",
+        put: "red",
+        delete: "red",
+      },
+      {
+        type: "FamilyMemberHistory",
+        profile:
+          "https://fhir.hl7.org.uk/STU3/StructureDefinition/CareConnect-FamilyMemberHistory-1",
+        get: "amber",
+        post: "red",
+        put: "red",
+        delete: "red",
       },
       {
         type: "Observation",
@@ -132,16 +159,16 @@ module.exports = {
         type: "Encounter",
         profile:
           "https://fhir.hl7.org.uk/STU3/StructureDefinition/CareConnect-Encounter-1",
-        get: "green",
-        post: "red",
-        put: "red",
-        delete: "red",
+        get: "amber",
+        post: "amber",
+        put: "amber",
+        delete: "amber",
       },
       {
         type: "Condition",
         profile:
           "https://fhir.hl7.org.uk/STU3/StructureDefinition/CareConnect-Condition-1",
-        get: "green",
+        get: "amber",
         post: "amber",
         put: "amber",
         delete: "amber",
@@ -150,7 +177,7 @@ module.exports = {
         type: "Procedure",
         profile:
           "https://fhir.hl7.org.uk/STU3/StructureDefinition/CareConnect-Procedure-1",
-        get: "green",
+        get: "amber",
         post: "amber",
         put: "amber",
         delete: "amber",
@@ -159,7 +186,7 @@ module.exports = {
         type: "AllergyIntolerance",
         profile:
           "https://fhir.hl7.org.uk/STU3/StructureDefinition/CareConnect-AllergyIntolerance-1",
-        get: "green",
+        get: "amber",
         post: "amber",
         put: "amber",
         delete: "amber",
@@ -168,7 +195,7 @@ module.exports = {
         type: "MedicationStatement",
         profile:
           "https://fhir.graphnethealth.com/STU3/StructureDefinition/MedicationStatement",
-        get: "green",
+        get: "amber",
         post: "amber",
         put: "amber",
         delete: "amber",
@@ -177,7 +204,7 @@ module.exports = {
         type: "MedicationRequest",
         profile:
           "https://fhir.graphnethealth.com/STU3/StructureDefinition/MedicationRequest",
-        get: "green",
+        get: "amber",
         post: "red",
         put: "red",
         delete: "red",
@@ -186,10 +213,10 @@ module.exports = {
         type: "QuestionnaireResponse",
         profile:
           "https://fhir.graphnethealth.com/STU3/StructureDefinition/QuestionnaireResponse",
-        get: "red",
-        post: "red",
-        put: "red",
-        delete: "red",
+        get: "amber",
+        post: "amber",
+        put: "amber",
+        delete: "amber",
       },
       {
         type: "Binary",
