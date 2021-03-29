@@ -14,13 +14,5 @@ DELETE /Observation/{id}
 ```
 
 :::info
-Conditional deletes were not explicitly requested, how does VONK treat them?
-:::
-
-:::warning
-Should we include ETag validation - if so would it be optional or mandatory?
-:::
-
-:::warning
-Testing of "client id" deletes to be performed plus supporting text to describe this.
+The DELETE functionality will only permit you to delete content that has been added by your system. You cannot delete content loaded by others.
 :::
