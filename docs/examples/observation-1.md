@@ -38,6 +38,10 @@ import TabItem from '@theme/TabItem';
         {
             "system": "http://www.acme.com/health/Id",
             "value": "069e985e-7eb1-47a2-9a21-513edc2086af"
+        },
+        {
+            "system": "http://www.med.com/id",
+            "value": "32443-234/DF"
         }
     ],
     "status": "final",
