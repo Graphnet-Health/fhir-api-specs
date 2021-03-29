@@ -52,7 +52,7 @@ All the search examples shown below will accept the patient parameter in either 
 
 ### Code
 
-When searching for observations with a specific code then the query can be constructed using different combinations of the code system and the code value.
+When searching for `Observations` with a specific code then the query can be constructed using different combinations of the code system and the code value.
 
 ```http
 GET /Observation?patient=[value]&code=[code]
@@ -72,7 +72,7 @@ GET /Observation?patient=[value]&code=http://snomed.info/sct|60621009
 For further information consult the FHIR specification at http://hl7.org/fhir/STU3/search.html#token
 :::
 
-In addition to searching for observations with single codes, it is possible to construct a search using a predefined `ValueSet` that defines a collection of codes.
+In addition to searching for `Observations` with single codes, it is possible to construct a search using a predefined `ValueSet` that defines a collection of codes.
 
 ```http
 GET /Observation?patient=[value]&code:in=[value set url]
@@ -84,7 +84,7 @@ The `ValueSets` that are available for this functionality will evolve over time.
 
 ### Date
 
-To search on the date an observation was made the following search constructs can be used.
+To search on the date an `Observation` was made the following search constructs can be used.
 
 ```http
 GET /Observation?patient=[value]&date=[value]
@@ -96,13 +96,13 @@ GET /Observation?patient=[value]&date=lt[value]
 GET /Observation?patient=[value]&date=gt[value]
 ```
 
-So to search for an observation on 23rd January 2021 the query would be
+So to search for an `Observation` on 23rd January 2021 the query would be
 
 ```http
 GET /Observation?patient=[value]&date=2021-01-23
 ```
 
-To search for all observations before the 23rd December 2020, the following could be used
+To search for all `Observations` before the 23rd December 2020, the following could be used
 
 ```http
 GET /Observation?patient=[value]&date=lt2020-12-23
@@ -110,7 +110,7 @@ GET /Observation?patient=[value]&date=lt2020-12-23
 
 ### Identifiers
 
-To search for observations using identifiers present on the observation record, the following can be used
+To search for `Observations` using identifiers present on the `Observation` record, the following can be used
 
 ```http
 GET /Observation?patient=[value]&identifier=[code]
@@ -132,15 +132,15 @@ For further information consult the FHIR specification at http://hl7.org/fhir/ST
 
 ### Status
 
-The Observation FHIR query currently only accepts records with a status of `final`. The search parameter is a placeholder for future developments.
+The `Observation` FHIR query currently only accepts records with a status of `final`. The search parameter is a placeholder for future developments.
 
 ```http
-GET /Observation?patient={id}&encounter=final
+GET /Observation?patient={id}&status=final
 ```
 
 ### Encounter
 
-If the observation record was recorded with information relating to the clinical encounter that it was part of, then it can be retrieved using the encounter id.
+If the `Observation` record was recorded with information relating to the clinical encounter that it was part of, then it can be retrieved using the `id` of that `Encounter`.
 
 ```http
 GET /Observation?patient={id}&encounter={id}
@@ -148,15 +148,15 @@ GET /Observation?patient={id}&encounter={id}
 
 ### \_lastUpdated
 
-To retrieve observations based on the updated date of the record
+To retrieve `Observations` based on the updated date of the record
 
 ```http
-GET /Observation?patient={id}&status={code}
+GET /Observation?patient={id}&_lastUpdated={value}
 ```
 
-:::important
+<!-- :::important
 Need to check how this was implemented (were modifiers used?)
-:::
+::: -->
 
 ### \_summary
 
@@ -181,7 +181,7 @@ This can be added to any query construct.
 
 ## Sort Parameters
 
-The default sort order for `observation` records is in descending date order (i.e. most current first).
+The default sort order for `Observation` records is in descending date order (i.e. most current first).
 The following sort parameters are also available.
 
 ### Date
