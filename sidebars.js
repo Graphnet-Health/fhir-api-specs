@@ -67,8 +67,8 @@ module.exports = {
         },
         {
           Extensions: [
-            "resources/extLastIssueDate",
-            "resources/extPrescriptionType",
+            // "resources/extLastIssueDate",
+            // "resources/extPrescriptionType",
           ],
         },
       ],
