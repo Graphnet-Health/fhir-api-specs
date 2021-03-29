@@ -14,5 +14,5 @@ PUT /Observation/{id}
 ```
 
 :::info
-The PUT functionality will only permit you to delete content that has been added by your system. You cannot delete content loaded by others.
+The PUT functionality will only permit you to update content that has been added by your system. You cannot update content loaded by others.
 :::
