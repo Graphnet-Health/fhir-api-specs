@@ -54,7 +54,7 @@ module.exports = {
         {
           to: "docs/version-history/releases",
           activeBasePath: "docs",
-          label: "Version 0.1.0",
+          label: "Version 0.1.0 (Alpha)",
           position: "right",
         },
       ],
@@ -95,7 +95,7 @@ module.exports = {
     },
   },
   customFields: {
-    version: "0.1.0",
+    version: "0.1.0 - Alpha",
     jira: {
       display: true,
       base: "https://jira.systemc.com/browse/",
