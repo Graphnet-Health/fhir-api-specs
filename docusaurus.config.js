@@ -3,7 +3,7 @@ module.exports = {
   tagline: "FHIR API guide for CareCentric",
   url: "https://your-docusaurus-test-site.com",
   baseUrl: "/",
-  onBrokenLinks: "throw",
+  onBrokenLinks: "warn",
   onBrokenMarkdownLinks: "warn",
   favicon: "img/favicon.png",
   organizationName: "facebook", // Usually your GitHub org/user name.
@@ -18,7 +18,7 @@ module.exports = {
         '<span class="text-white">🚧 Development Version - Not for use 🚧</span>',
     },
     navbar: {
-      title: "CareCentric FHIR API",
+      title: "CareCentric FHIR API (STU3)",
       logo: {
         alt: "Graphnet Health Logo",
         src: "img/Graphnet-Logo-500px.png",
@@ -54,7 +54,7 @@ module.exports = {
         {
           to: "docs/version-history/releases",
           activeBasePath: "docs",
-          label: "Version 0.0.1",
+          label: "Version 0.1.0 (Alpha)",
           position: "right",
         },
       ],
@@ -95,23 +95,55 @@ module.exports = {
     },
   },
   customFields: {
-    version: "0.0.1",
+    version: "0.1.0 - Alpha",
     jira: {
       display: true,
       base: "https://jira.systemc.com/browse/",
     },
     resources: [
-      // {
-      //   type: "Immunization",
-      //   profile:
-      //     "https://fhir.hl7.org.uk/STU3/StructureDefinition/CareConnect-Immunization-1",
-      //   get: "green",
-      //   post: "amber",
-      //   put: "red",
-      //   delete: "red",
-      // },
+      {
+        type: "Immunization",
+        active: false,
+        profile:
+          "https://fhir.hl7.org.uk/STU3/StructureDefinition/CareConnect-Immunization-1",
+        get: "amber",
+        post: "amber",
+        put: "amber",
+        delete: "amber",
+      },
+      {
+        type: "Flag",
+        active: false,
+        profile:
+          "https://fhir.graphnethealth.com/STU3/StructureDefinition-Flag",
+        get: "red",
+        post: "red",
+        put: "red",
+        delete: "red",
+      },
+      {
+        type: "DiagnosticResult",
+        active: false,
+        profile:
+          "https://fhir.graphnethealth.com/STU3/StructureDefinition/DiagnosticResult",
+        get: "red",
+        post: "red",
+        put: "red",
+        delete: "red",
+      },
+      {
+        type: "FamilyMemberHistory",
+        active: false,
+        profile:
+          "https://fhir.hl7.org.uk/STU3/StructureDefinition/CareConnect-FamilyMemberHistory-1",
+        get: "amber",
+        post: "red",
+        put: "red",
+        delete: "red",
+      },
       {
         type: "Observation",
+        active: true,
         profile:
           "https://fhir.hl7.org.uk/STU3/StructureDefinition/CareConnect-Observation-1",
         get: "green",
@@ -121,6 +153,7 @@ module.exports = {
       },
       {
         type: "Patient",
+        active: false,
         profile:
           "https://fhir.hl7.org.uk/STU3/StructureDefinition/CareConnect-Patient-1",
         get: "green",
@@ -128,60 +161,85 @@ module.exports = {
         put: "red",
         delete: "red",
       },
-      // {
-      //   type: "Encounter",
-      //   profile:
-      //     "https://fhir.hl7.org.uk/STU3/StructureDefinition/CareConnect-Encounter-1",
-      //   get: "green",
-      //   post: "red",
-      //   put: "red",
-      //   delete: "red",
-      // },
-      // {
-      //   type: "Condition",
-      //   profile:
-      //     "https://fhir.hl7.org.uk/STU3/StructureDefinition/CareConnect-Condition-1",
-      //   get: "green",
-      //   post: "amber",
-      //   put: "amber",
-      //   delete: "amber",
-      // },
-      // {
-      //   type: "Procedure",
-      //   profile:
-      //     "https://fhir.hl7.org.uk/STU3/StructureDefinition/CareConnect-Procedure-1",
-      //   get: "green",
-      //   post: "amber",
-      //   put: "amber",
-      //   delete: "amber",
-      // },
-      // {
-      //   type: "AllergyIntolerance",
-      //   profile:
-      //     "https://fhir.hl7.org.uk/STU3/StructureDefinition/CareConnect-AllergyIntolerance-1",
-      //   get: "green",
-      //   post: "amber",
-      //   put: "amber",
-      //   delete: "amber",
-      // },
-      // {
-      //   type: "MedicationStatement",
-      //   profile:
-      //     "https://fhir.graphnethealth.com/STU3/StructureDefinition/MedicationStatement",
-      //   get: "green",
-      //   post: "amber",
-      //   put: "amber",
-      //   delete: "amber",
-      // },
-      // {
-      //   type: "MedicationRequest",
-      //   profile:
-      //     "https://fhir.graphnethealth.com/STU3/StructureDefinition/MedicationRequest",
-      //   get: "green",
-      //   post: "red",
-      //   put: "red",
-      //   delete: "red",
-      // },
+      {
+        type: "Encounter",
+        active: false,
+        profile:
+          "https://fhir.hl7.org.uk/STU3/StructureDefinition/CareConnect-Encounter-1",
+        get: "amber",
+        post: "amber",
+        put: "amber",
+        delete: "amber",
+      },
+      {
+        type: "Condition",
+        active: false,
+        profile:
+          "https://fhir.hl7.org.uk/STU3/StructureDefinition/CareConnect-Condition-1",
+        get: "amber",
+        post: "amber",
+        put: "amber",
+        delete: "amber",
+      },
+      {
+        type: "Procedure",
+        active: false,
+        profile:
+          "https://fhir.hl7.org.uk/STU3/StructureDefinition/CareConnect-Procedure-1",
+        get: "amber",
+        post: "amber",
+        put: "amber",
+        delete: "amber",
+      },
+      {
+        type: "AllergyIntolerance",
+        active: false,
+        profile:
+          "https://fhir.hl7.org.uk/STU3/StructureDefinition/CareConnect-AllergyIntolerance-1",
+        get: "amber",
+        post: "amber",
+        put: "amber",
+        delete: "amber",
+      },
+      {
+        type: "MedicationStatement",
+        active: false,
+        profile:
+          "https://fhir.graphnethealth.com/STU3/StructureDefinition/MedicationStatement",
+        get: "amber",
+        post: "amber",
+        put: "amber",
+        delete: "amber",
+      },
+      {
+        type: "MedicationRequest",
+        active: false,
+        profile:
+          "https://fhir.graphnethealth.com/STU3/StructureDefinition/MedicationRequest",
+        get: "amber",
+        post: "red",
+        put: "red",
+        delete: "red",
+      },
+      {
+        type: "QuestionnaireResponse",
+        active: false,
+        profile:
+          "https://fhir.graphnethealth.com/STU3/StructureDefinition/QuestionnaireResponse",
+        get: "amber",
+        post: "amber",
+        put: "amber",
+        delete: "amber",
+      },
+      {
+        type: "Binary",
+        active: false,
+        profile: "",
+        get: "red",
+        post: "red",
+        put: "red",
+        delete: "red",
+      },
     ],
   },
   presets: [

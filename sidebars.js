@@ -11,9 +11,6 @@ module.exports = {
         "authorisation/national_auth",
       ],
     },
-    // "fhir_apis",
-    // "cc_apis",
-    // "cc_data_sub_apis",
   ],
   api: [
     {
@@ -64,16 +61,16 @@ module.exports = {
             // "profiles/MedicationStatement",
             // "profiles/MedicationRequest",
             "profiles/Observation",
-            "profiles/Patient",
+            // "profiles/Patient",
             // "profiles/Procedure",
           ],
         },
-        // {
-        //   Extensions: [
-        //     "resources/extLastIssueDate",
-        //     "resources/extPrescriptionType",
-        //   ],
-        // },
+        {
+          Extensions: [
+            // "resources/extLastIssueDate",
+            // "resources/extPrescriptionType",
+          ],
+        },
       ],
     },
   ],
