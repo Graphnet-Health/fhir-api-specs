@@ -10,7 +10,7 @@ The Graphnet FHIR APIs make use of the [FHIR STU3](http://hl7.org/fhir/STU3/inde
 
 When Graphnet specific profiles are used the rationale for the profile is documented within this API guide.
 
-- The `CareConnet` profiles are available from the [online profile repository](https://fhir.hl7.org.uk/) hosted by [HL7 UK](https://www.hl7.org.uk/)
+- The `CareConnect` profiles are available from the [online profile repository](https://fhir.hl7.org.uk/) hosted by [HL7 UK](https://www.hl7.org.uk/)
 - The `Graphnet` profiles are published on the [Simplifer.net](https://simplifier.net/) site.
 
 The profiles used by the Graphnet APIs are detailed below.

@@ -28,6 +28,12 @@ module.exports = {
                 "api/apiObservationPUT",
                 "api/apiObservationDELETE",
               ],
+              AllergyIntolerance: [
+                "api/apiAllergy",
+                "api/apiAllergyPOST",
+                "api/apiAllergyPUT",
+                "api/apiAllergyDELETE",
+              ],
             },
           ],
         },
@@ -53,7 +59,7 @@ module.exports = {
         "profiles/profileOverview",
         {
           Profiles: [
-            // "profiles/AllergyIntolerance",
+            "profiles/AllergyIntolerance",
             // "profiles/Condition",
             // "profiles/Encounter",
             // "profiles/Immunization",
