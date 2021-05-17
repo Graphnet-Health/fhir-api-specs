@@ -1,5 +1,5 @@
 ---
-id: apiAllergyPOST
+id: apiAllergyIntolerancePOST
 title: POST AllergyIntolerance
 sidebar_label: POST AllergyIntolerance
 hide_table_of_contents: true

@@ -1,5 +1,5 @@
 ---
-id: apiAllergyPUT
+id: apiAllergyIntolerancePUT
 title: PUT AllergyIntolerance
 sidebar_label: PUT AllergyIntolerance
 hide_table_of_contents: true

@@ -1,5 +1,5 @@
 ---
-id: apiAllergy
+id: apiAllergyIntolerance
 title: GET AllergyIntolerance
 sidebar_label: GET AllergyIntolerance
 ---
@@ -11,9 +11,9 @@ The **AllergyIntolerance** API can be used to interact with Allergy Intolerance 
 `AllergyIntolerance` records can be created, updated, queried and deleted using this API.
 
 - Retrieving or searching for `AllergyIntolerance` records is performed using a HTTP GET described below
-- Adding new `AllergyIntolerance` records is performed using a [HTTP POST](apiAllergyPOST)
-- Updating existing `AllergyIntolerance` records is performed using a [HTTP PUT](apiAllergyPUT)
-- Deleting existing `AllergyIntolerance` records is performed using a [HTTP DELETE](apiAllergyDELETE)
+- Adding new `AllergyIntolerance` records is performed using a [HTTP POST](apiAllergyIntolerancePOST)
+- Updating existing `AllergyIntolerance` records is performed using a [HTTP PUT](apiAllergyIntolerancePUT)
+- Deleting existing `AllergyIntolerance` records is performed using a [HTTP DELETE](apiAllergyIntoleranceDELETE)
 
 ## AllergyIntolerance Retrieval
 

@@ -193,13 +193,13 @@ module.exports = {
       },
       {
         type: "AllergyIntolerance",
-        active: false,
+        active: true,
         profile:
           "https://fhir.hl7.org.uk/STU3/StructureDefinition/CareConnect-AllergyIntolerance-1",
-        get: "amber",
-        post: "amber",
-        put: "amber",
-        delete: "amber",
+        get: "green",
+        post: "green",
+        put: "green",
+        delete: "green",
       },
       {
         type: "MedicationStatement",

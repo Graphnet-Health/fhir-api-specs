@@ -1,5 +1,5 @@
 ---
-id: apiAllergyDELETE
+id: apiAllergyIntoleranceDELETE
 title: DELETE AllergyIntolerance
 sidebar_label: DELETE AllergyIntolerance
 hide_table_of_contents: true
