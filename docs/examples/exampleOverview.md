@@ -15,3 +15,7 @@ It is expected that overtime that the resources will increase in content.
 ### Examples : Observation
 
 - [Simple Observation with value/units](exampleObservation-1)
+
+### Examples : AllergyIntolerance
+
+- [Simple AllergyIntolerance resource](exampleAllergy-1)

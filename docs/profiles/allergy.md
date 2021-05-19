@@ -6,9 +6,7 @@ sidebar_label: AllergyIntolerance
 
 ### Profile
 
-The standard CareConnect profile is used for AllergyIntolerance, it can be viewed on the HL7 UK website.
-
-[https://fhir.hl7.org.uk/STU3/StructureDefinition/CareConnect-AllergyIntolerance-1](https://fhir.hl7.org.uk/STU3/StructureDefinition/CareConnect-AllergyIntolerance-1)
+The AllergyIntolerance must conform to the Graphnet specific Allergy Intolerance profile.
 
 ### Extensions
 
@@ -16,26 +14,28 @@ No extensions are used for the AllergyIntolerance profile within the Graphnet so
 
 ### Implemented Data Items
 
+The Graphnet FHIR AllergyIntolerance API currently supports a limited number of elements from the FHIR AllergyIntolerance resource.
+
+The table below details where constraints are added. The FHIR API will not allow records to be stored containing restricted elements.
+
 <div class="widetable">
 
-| Path                                  | Level of Support    |
-| ------------------------------------- | ------------------- |
-| AllergyIntolerance.identifier         | System & Value only |
-| AllergyIntolerance.clinicalStatus     | "Active" only       |
-| AllergyIntolerance.verificationStatus | "Confirmed" only    |
-| AllergyIntolerance.type               | Prohibited – not supported |
-| AllergyIntolerance.category           | Prohibited – not supported |
-| AllergyIntolerance.criticality        | Prohibited – not supported |
-| AllergyIntolerance.code               | Restricted values (see below) |
-| AllergyIntolerance.patient            | System & Value only |
-| AllergyIntolerance.encounter          | System & Value only |
-| AllergyIntolerance.onset              | Prohibited – not supported |
-| AllergyIntolerance.assertedDate       | Date only |
-| AllergyIntolerance.recorder           | Restricted values (see below) |
-| AllergyIntolerance.asserter           | Restricted values (see below) |
-| AllergyIntolerance.lastOccurence      | Prohibited – not supported |
-| AllergyIntolerance.note               | Prohibited – not supported |
-| AllergyIntolerance.reaction           | Prohibited – not supported |
+| Path                                        | Level of Support              |
+| --------------------------------------------| ----------------------------- |
+| AllergyIntolerance.identifier               | System & Value only           |
+| AllergyIntolerance.clinicalStatus           | "Active" only                 |
+| AllergyIntolerance.category                 | Prohibited – not supported    |
+| AllergyIntolerance.code                     | Restricted values (see below) |
+| AllergyIntolerance.onset                    | Limited to dateTime only      |
+| AllergyIntolerance.lastOccurence            | Prohibited – not supported    |
+| AllergyIntolerance.note                     | Limited to text only          |
+| AllergyIntolerance.reaction                 | Limited to one only           |
+| AllergyIntolerance.reaction.substance       | Limited to one only (no text) |
+| AllergyIntolerance.reaction.manifestation   | Limited to one only (no text) |
+| AllergyIntolerance.reaction.onset           | Prohibited – not supported    |
+| AllergyIntolerance.reaction.severity        | Prohibited – not supported    |
+| AllergyIntolerance.reaction.exposureRoute   | Prohibited – not supported    |
+| AllergyIntolerance.reaction.note            | Prohibited – not supported    |
 
 </div>
 
@@ -92,27 +92,4 @@ If the SNOMED description Id is also known, this can be recorded making use of t
     "code": "762952008",
     "display": "Peanut"
 }
-```
-### AllergyIntolerance.recorder
-
-Limited information is persisted for performers in the current Graphnet API. Currently, this is limited to the name of the performer only.
-
-```json
-"recorder": [
-    {
-        "display": "Dr David Mannings"
-    }
-]
-```
-
-### AllergyIntolerance.asserter
-
-Limited information is persisted for performers in the current Graphnet API. Currently, this is limited to the name of the performer only.
-
-```json
-"asserter": [
-    {
-        "display": "Dr David Mannings"
-    }
-]
 ```
