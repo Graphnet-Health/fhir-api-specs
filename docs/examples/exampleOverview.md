@@ -19,3 +19,7 @@ It is expected that overtime that the resources will increase in content.
 ### Examples : AllergyIntolerance
 
 - [Simple AllergyIntolerance resource](exampleAllergy-1)
+
+### Examples : Immunization
+
+- [Simple Immunization resource](exampleImmunization-1)

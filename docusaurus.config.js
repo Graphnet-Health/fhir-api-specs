@@ -54,7 +54,7 @@ module.exports = {
         {
           to: "docs/version-history/releases",
           activeBasePath: "docs",
-          label: "Version 0.2.0 (Alpha)",
+          label: "Version 0.3.0 (Alpha)",
           position: "right",
         },
       ],
@@ -106,7 +106,7 @@ module.exports = {
         active: false,
         profile:
           "https://fhir.hl7.org.uk/STU3/StructureDefinition/CareConnect-Immunization-1",
-        get: "amber",
+        get: "green",
         post: "amber",
         put: "amber",
         delete: "amber",

@@ -34,6 +34,7 @@ module.exports = {
                 "api/apiAllergyIntolerancePUT",
                 "api/apiAllergyIntoleranceDELETE",
               ],
+              Immunization: ["api/apiImmunization"],
             },
           ],
         },
