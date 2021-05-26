@@ -13,4 +13,4 @@ The **Observation** API can be used to add new observation records to a patient'
 POST /Observation
 ```
 
-Note that observations created in via this manner can also be updated or deleted by using the API as well.
+Note that observations created in this manner can also be updated or deleted by using the API as well.

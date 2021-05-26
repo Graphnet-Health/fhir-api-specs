@@ -6,7 +6,7 @@ sidebar_label: GET Observation
 
 ## Overview
 
-The **Observation** API can be used to interactwith observation records for a patient. When querying for data it must always be in the context of a single patient.
+The **Observation** API can be used to interact with observation records for a patient. When querying for data it must always be in the context of a single patient.
 
 `Observation` records can be created, updated, queried and deleted using this API.
 
@@ -33,7 +33,7 @@ GET /Observation?_id={id}
 
 ## Query Parameters
 
-Unless retrieving an `Observation` resource by the use of `id` then the `subject` must always be present. The `Observation` can only be targetted against a single patient at any one time.
+Unless retrieving an `Observation` resource by the use of `id` then the `subject` must always be present. The `Observation` can only be targeted against a single patient at any one time.
 
 ### Subject
 

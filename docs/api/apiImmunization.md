@@ -30,7 +30,7 @@ GET /Immunization?_id={id}
 
 ## Query Parameters
 
-Unless retrieving an `Immunization` resource by the use of `id` the `subject` must always be present. The `Immunization` can only be targetted against a single patient at any one time.
+Unless retrieving an `Immunization` resource by the use of `id` the `subject` must always be present. The `Immunization` can only be targeted against a single patient at any one time.
 
 ### Subject
 
@@ -63,7 +63,7 @@ For example to search for a Yellow Fever vaccination product using SNOMED would 
 ```http
 GET /Immunization?patient=[value]&vaccine-code=http://snomed.info/sct|9895711000001104
 ```
-In addition, the ':in' search modifier can be used to search for an immunization code that is in a specific valueset. For example to seach for an Immunization code in the CareConnect-VaccineCode valueset would look like the following:
+In addition, the `:in` search modifier can be used to search for an immunization code that is in a specific valueset. For example to seach for an Immunization code in the CareConnect-VaccineCode valueset would look like the following:
 
 ```http
 GET /Immunization?patient=[value]&vaccine-code:in=https://fhir.hl7.org.uk/STU3/ValueSet/CareConnect-VaccineCode-1

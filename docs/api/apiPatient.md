@@ -8,7 +8,7 @@ import JiraTag from '@site/src/components/JiraTag';
 
 ## Overview
 
-The Graphnet FHIR API is intended to be used as a patient centric API and as such all FHIR APIs are targetted on a patient.
+The Graphnet FHIR API is intended to be used as a patient centric API and as such all FHIR APIs are targeted on a patient.
 
 The `Patient` API can be used to retrieve demographics information for a patient or as a means to discover the `Patient.id` so other FHIR APIs can be used.
 
@@ -18,7 +18,7 @@ Patients cannot be created, deleted or updated using the FHIR APIs. There are a 
 
 ### id
 
-The `Patient` resource can be retrieved directly if the `id` of the resource is known. By appending the `id` to the url will cause the `Patient` resource to be retrieved. Unlike all other retrieval queries the response will be a single resource as opposed to a `Bundle`
+The `Patient` resource can be retrieved directly if the `id` of the resource is known. By appending the `id` to the url will cause the `Patient` resource to be retrieved. Unlike all other retrieval queries the response will be a single resource as opposed to a `Bundle`.
 <JiraTag id="GBF-625"/>
 
 ```http
