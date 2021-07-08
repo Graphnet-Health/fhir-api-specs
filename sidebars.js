@@ -35,6 +35,12 @@ module.exports = {
                 "api/apiAllergyIntoleranceDELETE",
               ],
               Immunization: ["api/apiImmunization"],
+              QuestionnaireResponse: [
+                "api/apiQuestionnaireResponse",
+                "api/apiQuestionnaireResponsePOST",
+                "api/apiQuestionnaireResponsePUT",
+                "api/apiQuestionnaireResponseDELETE",
+              ]
             },
           ],
         },
@@ -50,6 +56,7 @@ module.exports = {
         "examples/examplePatient",
         "examples/exampleObservation-1",
         "examples/exampleAllergy-1",
+        "examples/exampleQuestionnaireResponse-1",
       ],
     },
   ],
@@ -71,6 +78,7 @@ module.exports = {
             "profiles/Observation",
             // "profiles/Patient",
             // "profiles/Procedure",
+            "profiles/QuestionnaireResponse",
           ],
         },
         {

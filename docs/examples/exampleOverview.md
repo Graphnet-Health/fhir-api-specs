@@ -23,3 +23,7 @@ It is expected that overtime that the resources will increase in content.
 ### Examples : Immunization
 
 - [Simple Immunization resource](exampleImmunization-1)
+
+### Examples : QuestionnaireResponse
+
+- [Simple QuestionnaireResponse resource](exampleQuestionnaireResponse-1)
