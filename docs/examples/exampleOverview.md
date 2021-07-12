@@ -20,6 +20,11 @@ It is expected that overtime that the resources will increase in content.
 
 - [Simple AllergyIntolerance resource](exampleAllergy-1)
 
+### Examples : FamilyMemberHistory
+
+- [Family member history with family member asserted](exampleAllergy-1)
+- [Family member history with unknown family member](exampleAllergy-1)
+
 ### Examples : Immunization
 
 - [Simple Immunization resource](exampleImmunization-1)
