@@ -34,13 +34,14 @@ module.exports = {
                 "api/apiAllergyIntolerancePUT",
                 "api/apiAllergyIntoleranceDELETE",
               ],
+              FamilyMemberHistory: ["api/apiFamilyMemberHistory"],
               Immunization: ["api/apiImmunization"],
               QuestionnaireResponse: [
                 "api/apiQuestionnaireResponse",
                 "api/apiQuestionnaireResponsePOST",
                 "api/apiQuestionnaireResponsePUT",
                 "api/apiQuestionnaireResponseDELETE",
-              ]
+              ],
             },
           ],
         },
