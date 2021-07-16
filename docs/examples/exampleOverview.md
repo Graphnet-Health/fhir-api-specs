@@ -22,8 +22,8 @@ It is expected that overtime that the resources will increase in content.
 
 ### Examples : FamilyMemberHistory
 
-- [Family member history with family member asserted](exampleAllergy-1)
-- [Family member history with unknown family member](exampleAllergy-1)
+- [Family member history with family member asserted](fmh-1)
+- [Family member history with unknown family member](fmh-2)
 
 ### Examples : Immunization
 
