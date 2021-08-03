@@ -136,7 +136,7 @@ module.exports = {
         active: false,
         profile:
           "https://fhir.hl7.org.uk/STU3/StructureDefinition/CareConnect-FamilyMemberHistory-1",
-        get: "amber",
+        get: "green",
         post: "red",
         put: "red",
         delete: "red",
@@ -226,10 +226,10 @@ module.exports = {
         active: false,
         profile:
           "https://fhir.graphnethealth.com/STU3/StructureDefinition/QuestionnaireResponse",
-        get: "amber",
-        post: "amber",
-        put: "amber",
-        delete: "amber",
+        get: "green",
+        post: "green",
+        put: "green",
+        delete: "green",
       },
       {
         type: "Binary",

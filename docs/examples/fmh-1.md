@@ -1,7 +1,7 @@
 ---
 id: fmh-1
 title: FamilyMemberHistory Example 1
-sidebar_label: FamilyMemberHistory  1
+sidebar_label: FamilyMemberHistory Example 1
 ---
 
 import Tabs from '@theme/Tabs';

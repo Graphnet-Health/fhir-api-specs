@@ -57,6 +57,8 @@ module.exports = {
         "examples/examplePatient",
         "examples/exampleObservation-1",
         "examples/exampleAllergy-1",
+        "examples/fmh-1",
+        "examples/fmh-2",
         "examples/exampleQuestionnaireResponse-1",
       ],
     },

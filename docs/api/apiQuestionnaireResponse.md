@@ -50,19 +50,19 @@ GET /QuestionnaireResponse?patient.identifier=https://fhir.nhs.uk/Id/nhs-number|
 
 All the search examples shown below will accept the patient parameter in either form.
 
-### Questionnaire TBC
+### Questionnaire
 
-When searching for `QuestionnaireResponses` with a specific code then the query can be constructed using different combinations of the code system and the code value.
+When searching for `QuestionnaireResponses` with a specific identifier for the Questionnaire the query can be constructed using different combinations of the system and identifier or an absolute url.
 
 ```http
-GET /QuestionnaireResponse?patient=Patient/{id}
+GET /QuestionnaireResponse?patient=[value]&questionnaire=Questionnaire/{id}
 ```
 
-When searching for NHS Numbers then use the system `https://fhir.nhs.uk/Id/nhs-number`
+When searching for a questionnaire with a system `https://domain.com` and identifier `dde1bee3-53e9-4985-9a5b-787973c2156a`
 For example:
 
 ```http
-GET /QuestionnaireResponse?patient=[value]&
+GET /QuestionnaireResponse?patient=[value]&questionnaire=https://domain.com|dde1bee3-53e9-4985-9a5b-787973c2156a
 ```
 
 

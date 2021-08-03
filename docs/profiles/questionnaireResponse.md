@@ -33,7 +33,6 @@ The table below details where constraints are added. The FHIR API will not allow
 | QuestionnaireResponse.item.subject             | Prohibited – not supported    |
 | QuestionnaireResponse.item.answer              | Limited to one only with limited datatypes supported  |
 | QuestionnaireResponse.item.answer.item         | Prohibited – not supported   |
-| QuestionnaireResponse.item.item                | Prohibited – not supported   |
 
 
 </div>
@@ -198,5 +197,23 @@ The coding element permits the use of the HL7 FHIR standard extension [CO-value]
     }
 ]
 ```
+#### Quantity
 
+```json
+"item": [
+{
+    "linkId": "4e1b95ad-2278-4e35-b745-7b2dcd844b97",
+    "text":"Text of question",
+    "answer": 
+        {
+        "valueQuantity": {
+            "value": 66.899999999999991,
+            "unit": "in",
+            "system": "http://unitsofmeasure.org",
+            "code": "[in_br]"
+          }
+        }
+      }
+]
+```
 
