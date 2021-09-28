@@ -31,7 +31,7 @@ The table below details where constraints are added. The FHIR API will not allow
 | QuestionnaireResponse.source                   | Prohibited – not supported    |
 | QuestionnaireResponse.item.definition          | Prohibited – not supported    |
 | QuestionnaireResponse.item.subject             | Prohibited – not supported    |
-| QuestionnaireResponse.item.answer              | Limited to one only with limited datatypes supported  |
+| QuestionnaireResponse.item.answer              | Limited datatypes supported  |
 | QuestionnaireResponse.item.answer.item         | Prohibited – not supported   |
 
 
