@@ -5,8 +5,8 @@ sidebar_label: Example Overview
 hide_table_of_contents: false
 ---
 
-The examples contained within this site are inteded to give a representation of the date returned from the Graphnet FHIR server.
-It is expected that overtime that the resources will increase in content.
+The examples contained within this site are intended to give a representation of the data returned from the Graphnet FHIR server.
+It is expected that over time that the resources will increase in content.
 
 ### Examples : Patient
 
@@ -32,3 +32,7 @@ It is expected that overtime that the resources will increase in content.
 ### Examples : QuestionnaireResponse
 
 - [Simple QuestionnaireResponse resource](exampleQuestionnaireResponse-1)
+
+### Examples : Flag
+
+- [Simple Flag resource](exampleFlag-1)

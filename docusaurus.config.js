@@ -54,7 +54,7 @@ module.exports = {
         {
           to: "docs/version-history/releases",
           activeBasePath: "docs",
-          label: "Version 0.4.0 (Alpha)",
+          label: "Version 0.5.0 (Alpha)",
           position: "right",
         },
       ],
@@ -116,10 +116,10 @@ module.exports = {
         active: false,
         profile:
           "https://fhir.graphnethealth.com/STU3/StructureDefinition-Flag",
-        get: "red",
-        post: "red",
-        put: "red",
-        delete: "red",
+        get: "amber",
+        post: "amber",
+        put: "amber",
+        delete: "amber",
       },
       {
         type: "DiagnosticResult",
@@ -133,7 +133,7 @@ module.exports = {
       },
       {
         type: "FamilyMemberHistory",
-        active: false,
+        active: true,
         profile:
           "https://fhir.hl7.org.uk/STU3/StructureDefinition/CareConnect-FamilyMemberHistory-1",
         get: "green",
@@ -223,7 +223,7 @@ module.exports = {
       },
       {
         type: "QuestionnaireResponse",
-        active: false,
+        active: true,
         profile:
           "https://fhir.graphnethealth.com/STU3/StructureDefinition/QuestionnaireResponse",
         get: "green",

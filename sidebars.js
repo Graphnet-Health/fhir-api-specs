@@ -42,6 +42,12 @@ module.exports = {
                 "api/apiQuestionnaireResponsePUT",
                 "api/apiQuestionnaireResponseDELETE",
               ],
+              Flag: [
+                "api/apiFlag",
+                "api/apiFlagPOST",
+                "api/apiFlagPUT",
+                "api/apiFlagDELETE",
+              ]
             },
           ],
         },
@@ -60,6 +66,7 @@ module.exports = {
         "examples/fmh-1",
         "examples/fmh-2",
         "examples/exampleQuestionnaireResponse-1",
+        "examples/exampleFlag-1",
       ],
     },
   ],
@@ -82,6 +89,7 @@ module.exports = {
             // "profiles/Patient",
             // "profiles/Procedure",
             "profiles/QuestionnaireResponse",
+            "profiles/Flag",
           ],
         },
         {
