@@ -32,14 +32,14 @@ The table below details where constraints are added. The FHIR API will not allow
 | QuestionnaireResponse.item.definition          | Prohibited – not supported    |
 | QuestionnaireResponse.item.subject             | Prohibited – not supported    |
 | QuestionnaireResponse.item.answer              | Limited datatypes supported  |
-| QuestionnaireResponse.item.answer.item         | Prohibited – not supported   |
+
 
 
 </div>
 
 ### QuestionnaireResponse.identifier
 
-Multiple identifiers are accepted, though only the system and value components should be present.
+One identifier is accepted, though only the system and value components should be present.
 
 ```json
 "identifier": [
