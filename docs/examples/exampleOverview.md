@@ -20,19 +20,35 @@ It is expected that over time that the resources will increase in content.
 
 - [Simple AllergyIntolerance resource](exampleAllergy-1)
 
+### Examples : MedicationStatement
+
+- [Simple MedicationStatement resource](exampleMedicationStatement-1)
+
+### Examples : MedicationRequest
+
+- [Simple MedicationRequest resource](exampleMedicationRequest-1)
+
+<!--
 ### Examples : FamilyMemberHistory
 
 - [Family member history with family member asserted](fmh-1)
 - [Family member history with unknown family member](fmh-2)
+-->
 
+<!--
 ### Examples : Immunization
 
 - [Simple Immunization resource](exampleImmunization-1)
+-->
 
+<!--
 ### Examples : QuestionnaireResponse
 
 - [Simple QuestionnaireResponse resource](exampleQuestionnaireResponse-1)
+-->
 
+<!--
 ### Examples : Flag
 
 - [Simple Flag resource](exampleFlag-1)
+-->

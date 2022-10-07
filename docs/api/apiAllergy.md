@@ -6,14 +6,12 @@ sidebar_label: GET AllergyIntolerance
 
 ## Overview
 
-The **AllergyIntolerance** API can be used to interact with Allergy Intolerance records for a patient. When querying for data it must always be in the context of a single patient.
+The `AllergyIntolerance` API can be used to interact with Allergy Intolerance records for a patient. When querying for data it must always be in the context of a single patient.
 
-`AllergyIntolerance` records can be created, updated, queried and deleted using this API.
+<!--`AllergyIntolerance` records can be created, updated, queried and deleted using this API.-->
 
-- Retrieving or searching for `AllergyIntolerance` records is performed using a HTTP GET described below
-- Adding new `AllergyIntolerance` records is performed using a [HTTP POST](apiAllergyIntolerancePOST)
-- Updating existing `AllergyIntolerance` records is performed using a [HTTP PUT](apiAllergyIntolerancePUT)
-- Deleting existing `AllergyIntolerance` records is performed using a [HTTP DELETE](apiAllergyIntoleranceDELETE)
+- Retrieving or searching for `AllergyIntolerance` records is performed using a HTTP GET described below.
+
 
 ## AllergyIntolerance Retrieval
 
@@ -25,7 +23,7 @@ The `AllergyIntolerance` resource can be retrieved directly if the `id` of the r
 GET /AllergyIntolerance/{id}
 ```
 
-An alternative method for retrieval is to make use of the `_id` search parameter. In this case, the result will be a `Bundle`. If the `id` is present the `Bundle` will contain a single `AllergyIntolerance` resource, otherwise the `Bundle` will be empty.
+An alternate method for retrieval is to make use of the `_id` search parameter. In this case, the result will be a `Bundle`. If the `id` is present the `Bundle` will contain a single `AllergyIntolerance` resource, otherwise the `Bundle` will be empty.
 
 ```http
 GET /AllergyIntolerance?_id={id}
@@ -77,12 +75,25 @@ To search on the date an `AllergyIntolerance` was asserted the following search 
 
 ```http
 GET /AllergyIntolerance?patient=[value]&date=[value]
-GET /AllergyIntolerance?patient=[value]&date=eq[value]
-GET /AllergyIntolerance?patient=[value]&date=ne[value]
-GET /AllergyIntolerance?patient=[value]&date=le[value]
-GET /AllergyIntolerance?patient=[value]&date=ge[value]
+```
+To improve searching the API supports the use of search modifiers. The modifiers supported for `asserted` are as below:
+
+| Modifier | Description                                            |
+| :------: | ------------------------------------------------------ |
+|  **lt**  | Returns dates less than the search term                |
+|  **le**  | Returns dates less than or equal to the search term    |
+|  **gt**  | Returns dates greater than the search term             |
+|  **ge**  | Returns dates greater than or equal to the search term |
+|  **ne**  | Returns dates not equal to the search term             |
+|  **eq**  | Returns dates equal to the search term                 |
+
+```http
 GET /AllergyIntolerance?patient=[value]&date=lt[value]
+GET /AllergyIntolerance?patient=[value]&date=le[value]
 GET /AllergyIntolerance?patient=[value]&date=gt[value]
+GET /AllergyIntolerance?patient=[value]&date=ge[value]
+GET /AllergyIntolerance?patient=[value]&date=ne[value]
+GET /AllergyIntolerance?patient=[value]&date=eq[value]
 ```
 
 To search for an `AllergyIntolerance` asserted on 23rd January 2021 the query would be:
@@ -96,6 +107,11 @@ To search for all `AllergyIntolerances` asserted before the 23rd December 2020 t
 ```http
 GET /AllergyIntolerance?patient=[value]&date=lt2020-12-23
 ```
+:::tip
+
+For more information on using FHIR search modifiers for dates, take a look at the FHIR STU3 standard at http://hl7.org/fhir/STU3/search.html#date
+
+:::
 
 ### Identifiers
 
@@ -120,7 +136,7 @@ For further information consult the FHIR specification at http://hl7.org/fhir/ST
 
 ### \_lastUpdated
 
-To retrieve `AllergyIntolerances` based on the updated date of the record
+To retrieve `AllergyIntolerances` based on the last updated date of the record.
 
 ```http
 GET /AllergyIntolerance?patient={id}&_lastUpdated={value}
@@ -138,7 +154,7 @@ Adding the `_summary=count` query parameter will change the behaviour of the que
 GET /AllergyIntolerance?patient={id}&_summary=count
 ```
 
-will return a response along the lines of
+This will return a response like:
 
 ```javascript
 {
@@ -147,6 +163,31 @@ will return a response along the lines of
     "total": 15,
     "id": "df23fd8b-d30c-47c6-a2bd-64c8a24b1166"
 }
+```
+
+This can be added to any query construct.
+
+### \_format
+The API supports both XML and JSON formats. The default format is JSON. The format can be requested either using HTTP headers or via the use of the _format query parameter as per the following table. 
+
+| Format Value            | API Response Format |
+| ----------------------- | :------------------:|
+|  xml                    | XML                 |
+|  text/xml               | XML                 |
+|  application/xml        | XML                 |
+|  application/fhir+xml   | XML                 |
+|  json                   | JSON                |
+|  text/json              | JSON                |
+|  application/json       | JSON                |
+|  application/fhir+json  | JSON                |
+
+```http
+GET /AllergyIntolerance?patient={id}&_format=[format value]
+```
+For example the query below would return a response in XML format.
+
+```http
+GET /AllergyIntolerance?patient={id}&_format=xml
 ```
 
 This can be added to any query construct.
@@ -166,11 +207,18 @@ GET /AllergyIntolerance?_sort=-date
 ## Paging
 
 ### \_count
+The parameter `_count` is defined as a hint to the server regarding how many resources should be returned in a single page.
 
 ```http
-GET /AllergyIntolerance?patient={id}&_count
+GET /AllergyIntolerance?patient={id}&_count=[n]
+```
+
+For example the query below would return a `Bundle` with 5 records per page.
+
+```http
+GET /AllergyIntolerance?patient={id}&_count=5
 ```
 
 ## Examples
 
-Example of payloads in both XML and JSON formats are available from the [examples section](../examples/exampleOverview) of this site.
+Examples of payloads in both XML and JSON formats are available from the [examples section](../examples/exampleOverview) of this site.
