@@ -158,7 +158,7 @@ GET /Observation?patient=[value]&category=[system]|
 
 ### Status
 
-The `Observation` FHIR query currently only accepts records with a **CHECK status of `final`**. The search parameter is a placeholder for future developments.
+The search for `Observations` by status the following construct can be used.
 
 ```http
 GET /Observation?patient={id}&status=final
@@ -179,7 +179,37 @@ To retrieve `Observations` based on the updated date of the record.
 ```http
 GET /Observation?patient={id}&_lastUpdated={value}
 ```
+To improve searching the API supports the use of search modifiers. The modifiers supported for `date` are as below:
 
+| Modifier | Description                                            |
+| :------: | ------------------------------------------------------ |
+|  **lt**  | Returns dates less than the search term                |
+|  **le**  | Returns dates less than or equal to the search term    |
+|  **gt**  | Returns dates greater than the search term             |
+|  **ge**  | Returns dates greater than or equal to the search term |
+|  **ne**  | Returns dates not equal to the search term             |
+|  **eq**  | Returns dates equal to the search term                 |
+
+```http
+GET /Observation?patient=[value]&_lastUpdated=lt[value]
+GET /Observation?patient=[value]&_lastUpdated=le[value]
+GET /Observation?patient=[value]&_lastUpdated=gt[value]
+GET /Observation?patient=[value]&_lastUpdated=ge[value]
+GET /Observation?patient=[value]&_lastUpdated=ne[value]
+GET /Observation?patient=[value]&_lastUpdated=eq[value]
+```
+
+So to search for an `Observation` on 23rd January 2021 the query would be:
+
+```http
+GET /Observation?patient=[value]&date=2021-01-23
+```
+
+To search for all `Observations` before the 23rd December 2020 the query would be:
+
+```http
+GET /Observation?patient=[value]&date=lt2020-12-23
+```
 <!-- :::important
 Need to check how this was implemented (were modifiers used?)
 ::: -->

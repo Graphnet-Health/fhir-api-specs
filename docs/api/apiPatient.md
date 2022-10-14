@@ -78,6 +78,11 @@ GET /Patient?nhsNumberVerificationStatus=https://fhir.hl7.org.uk/STU3/CodeSystem
 To find patients using their Family name (aka Surname) the `family` search parameter can be used.
 
 ```http
+GET /Patient?family={Surname}
+```
+For example to search for a Surname of Jones:
+
+```http
 GET /Patient?family=Jones
 ```
 
@@ -106,10 +111,16 @@ For more information on using FHIR search modifiers for strings, take a look at 
 To find patients using their given name (aka Forename) the `given` search parameter can be used.
 
 ```http
+GET /Patient?given={Forename}
+```
+
+For example to search for a Forename of Sarah:
+
+```http
 GET /Patient?given=Sarah
 ```
 
-To improve searching the API supports the use ofsearch modifiers. The modifiers supported for `given` are as below:
+To improve searching the API supports the use of search modifiers. The modifiers supported for `given` are as below:
 
 | Modifier | Description                                                                  |
 | -------- | ---------------------------------------------------------------------------- |
@@ -185,12 +196,32 @@ GET /Patient?deceased=false
 ```
 
 ### \_lastUpdated
-To retrieve `Patientss` based on the last updated date of the record.
+To retrieve `Patients` based on the last updated date of the record.
 
 ```http
 GET /Patient?_sort=_lastUpdated
 GET /Patient?_sort=-_lastUpdated
 ```
+To improve searching the API supports the use of search modifiers. The modifiers supported for `_lastUpdated` are as below:
+
+| Modifier | Description                                            |
+| :------: | ------------------------------------------------------ |
+|  **lt**  | Returns dates less than the search term                |
+|  **le**  | Returns dates less than or equal to the search term    |
+|  **gt**  | Returns dates greater than the search term             |
+|  **ge**  | Returns dates greater than or equal to the search term |
+|  **ne**  | Returns dates not equal to the search term             |
+|  **eq**  | Returns dates equal to the search term                 |
+
+```http
+GET /Patient?_lastUpdated=lt1985-06-01
+GET /Patient?_lastUpdated=le1985-06-01
+GET /Patient?_lastUpdated=gt1985-06-01
+GET /Patient?_lastUpdated=ge1985-06-01
+GET /Patient?_lastUpdated=ne1985-06-01
+GET /Patient?_lastUpdated=eq1985-06-01
+```
+
 ### \_summary
 
 Adding the `_summary=count` query parameter will change the behaviour of the query to return just the count of records, rather than the records themselves.

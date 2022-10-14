@@ -77,7 +77,6 @@ To search on the date a `MedicationRequest` was authored on the following search
 ```http
 GET /MedicationRequest?patient=[value]&authoredon=[value]
 ```
-
 To improve searching the API supports the use of search modifiers. The modifiers supported for `date` are as below:
 
 | Modifier | Description                                            |
@@ -118,7 +117,6 @@ GET /MedicationRequest?patient=[value]&identifier=[code]
 GET /MedicationRequest?patient=[value]&identifier=[system]|[code]
 GET /MedicationRequest?patient=[value]&identifier=|[code]
 GET /MedicationRequest?patient=[value]&identifier=[system]|
-
 ```
 
 For example
@@ -176,10 +174,25 @@ To retrieve `MedicationRequests` based on the updated date of the record
 ```http
 GET /MedicationRequest?patient={id}&_lastUpdated={value}
 ```
+To improve searching the API supports the use of search modifiers. The modifiers supported for `_lastUpdated` are as below:
 
-<!-- :::important
-Need to check how this was implemented (were modifiers used?)
-::: -->
+| Modifier | Description                                            |
+| :------: | ------------------------------------------------------ |
+|  **lt**  | Returns dates less than the search term                |
+|  **le**  | Returns dates less than or equal to the search term    |
+|  **gt**  | Returns dates greater than the search term             |
+|  **ge**  | Returns dates greater than or equal to the search term |
+|  **ne**  | Returns dates not equal to the search term             |
+|  **eq**  | Returns dates equal to the search term                 |
+
+```http
+GET /MedicationRequest?patient=[value]&_lastUpdated=lt[value]
+GET /MedicationRequest?patient=[value]&_lastUpdated=le[value]
+GET /MedicationRequest?patient=[value]&_lastUpdated=gt[value]
+GET /MedicationRequest?patient=[value]&_lastUpdated=ge[value]
+GET /MedicationRequest?patient=[value]&_lastUpdated=ne[value]
+GET /MedicationRequest?patient=[value]&_lastUpdated=eq[value]
+```
 
 ### \_summary
 

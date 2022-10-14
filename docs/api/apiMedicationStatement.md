@@ -117,7 +117,6 @@ GET /MedicationStatement?patient=[value]&identifier=[code]
 GET /MedicationStatement?patient=[value]&identifier=[system]|[code]
 GET /MedicationStatement?patient=[value]&identifier=|[code]
 GET /MedicationStatement?patient=[value]&identifier=[system]|
-
 ```
 
 For example
@@ -196,7 +195,6 @@ GET /MedicationStatement?patient=[value]&prescription-type=[code]
 GET /MedicationStatement?patient=[value]&prescription-type=[system]|[code]
 GET /MedicationStatement?patient=[value]&prescription-type=|[code]
 GET /MedicationStatement?patient=[value]&prescription-type=[system]|
-
 ```
 Permitted values:
 
@@ -225,10 +223,25 @@ To retrieve `MedicationStatements` based on the updated date of the record
 ```http
 GET /MedicationStatement?patient={id}&_lastUpdated={value}
 ```
+To improve searching the API supports the use of search modifiers. The modifiers supported for `_lastUpdated` are as below:
 
-<!-- :::important
-Need to check how this was implemented (were modifiers used?)
-::: -->
+| Modifier | Description                                            |
+| :------: | ------------------------------------------------------ |
+|  **lt**  | Returns dates less than the search term                |
+|  **le**  | Returns dates less than or equal to the search term    |
+|  **gt**  | Returns dates greater than the search term             |
+|  **ge**  | Returns dates greater than or equal to the search term |
+|  **ne**  | Returns dates not equal to the search term             |
+|  **eq**  | Returns dates equal to the search term                 |
+
+```http
+GET /MedicationStatement?patient=[value]&_lastUpdated=lt[value]
+GET /MedicationStatement?patient=[value]&_lastUpdated=le[value]
+GET /MedicationStatement?patient=[value]&_lastUpdated=gt[value]
+GET /MedicationStatement?patient=[value]&_lastUpdated=ge[value]
+GET /MedicationStatement?patient=[value]&_lastUpdated=ne[value]
+GET /MedicationStatement?patient=[value]&_lastUpdated=eq[value]
+```
 
 ### \_summary
 
