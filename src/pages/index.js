@@ -25,7 +25,7 @@ const features = [
     description: (
       <>
         A description of the specific FHIR APIs that have been implemented as
-        part of the Graphnet CareCentic system.
+        part of the Graphnet CareCentric system.
       </>
     ),
   },

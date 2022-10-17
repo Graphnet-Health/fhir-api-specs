@@ -39,12 +39,12 @@ module.exports = {
           label: "API",
           position: "left",
         },
-        {
-          to: "docs/profiles/profileOverview",
-          activeBasePath: "docs",
-          label: "Profiles",
-          position: "left",
-        },
+        //{
+          //to: "docs/profiles/profileOverview",
+          //activeBasePath: "docs",
+          //label: "Profiles",
+          //position: "left",
+        //},
         {
           to: "docs/examples/exampleOverview",
           activeBasePath: "docs",
@@ -54,7 +54,7 @@ module.exports = {
         {
           to: "docs/version-history/releases",
           activeBasePath: "docs",
-          label: "Version 0.1.0 (Alpha)",
+          label: "Version 0.5.0 (Alpha)",
           position: "right",
         },
       ],
@@ -116,21 +116,21 @@ module.exports = {
         active: false,
         profile:
           "https://fhir.graphnethealth.com/STU3/StructureDefinition-Flag",
-        get: "red",
-        post: "red",
-        put: "red",
-        delete: "red",
+        get: "amber",
+        post: "amber",
+        put: "amber",
+        delete: "amber",
       },
-      {
-        type: "DiagnosticResult",
-        active: false,
-        profile:
-          "https://fhir.graphnethealth.com/STU3/StructureDefinition/DiagnosticResult",
-        get: "red",
-        post: "red",
-        put: "red",
-        delete: "red",
-      },
+      //{
+        //type: "DiagnosticResult",
+        //active: false,
+        //profile:
+          //"https://fhir.graphnethealth.com/STU3/StructureDefinition/DiagnosticResult",
+        //get: "red",
+        //post: "red",
+        //put: "red",
+        //delete: "red",
+      //},
       {
         type: "FamilyMemberHistory",
         active: false,
@@ -147,16 +147,26 @@ module.exports = {
         profile:
           "https://fhir.hl7.org.uk/STU3/StructureDefinition/CareConnect-Observation-1",
         get: "green",
-        post: "green",
-        put: "green",
-        delete: "green",
+        post: "amber",
+        put: "amber",
+        delete: "amber",
       },
       {
         type: "Patient",
-        active: false,
+        active: true,
         profile:
           "https://fhir.hl7.org.uk/STU3/StructureDefinition/CareConnect-Patient-1",
         get: "green",
+        post: "red",
+        put: "red",
+        delete: "red",
+      },
+      {
+        type: "DocumentReference",
+        active: false,
+        profile:
+          "https://fhir.hl7.org.uk/STU3/StructureDefinition/CareConnect-DocumentReference-1",
+        get: "amber",
         post: "red",
         put: "red",
         delete: "red",
@@ -167,9 +177,9 @@ module.exports = {
         profile:
           "https://fhir.hl7.org.uk/STU3/StructureDefinition/CareConnect-Encounter-1",
         get: "amber",
-        post: "amber",
-        put: "amber",
-        delete: "amber",
+        post: "red",
+        put: "red",
+        delete: "red",
       },
       {
         type: "Condition",
@@ -193,30 +203,30 @@ module.exports = {
       },
       {
         type: "AllergyIntolerance",
-        active: false,
+        active: true,
         profile:
           "https://fhir.hl7.org.uk/STU3/StructureDefinition/CareConnect-AllergyIntolerance-1",
-        get: "amber",
-        post: "amber",
-        put: "amber",
-        delete: "amber",
+        get: "green",
+        post: "red",
+        put: "red",
+        delete: "red",
       },
       {
         type: "MedicationStatement",
-        active: false,
+        active: true,
         profile:
           "https://fhir.graphnethealth.com/STU3/StructureDefinition/MedicationStatement",
-        get: "amber",
+        get: "green",
         post: "amber",
         put: "amber",
         delete: "amber",
       },
       {
         type: "MedicationRequest",
-        active: false,
+        active: true,
         profile:
           "https://fhir.graphnethealth.com/STU3/StructureDefinition/MedicationRequest",
-        get: "amber",
+        get: "green",
         post: "red",
         put: "red",
         delete: "red",
@@ -235,12 +245,13 @@ module.exports = {
         type: "Binary",
         active: false,
         profile: "",
-        get: "red",
+        get: "amber",
         post: "red",
         put: "red",
         delete: "red",
       },
     ],
+    staticDirectories: ['public', 'static'],
   },
   presets: [
     [
