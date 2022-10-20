@@ -243,33 +243,6 @@ This can be added to any query construct.
 ## Sort Parameters
 
 The default sort order for `MedicationRequest` records is in descending date order (i.e. most current first).
-The following sort parameters are also available.
-
-### Date
-The `MedicationRequest` resource can be sorted by effective date or last issued date.
-
-```http
-GET /MedicationRequest?_sort=effective
-GET /MedicationRequest?_sort=-effective
-GET /MedicationRequest?_sort=last-issued
-GET /MedicationRequest?_sort=-last-issued
-```
-
-### Status
-The `MedicationRequest` resource can be sorted by status.
-
-```http
-GET /MedicationRequest?_sort=status
-GET /MedicationRequest?_sort=-status
-```
-
-### Prescription Type
-The `MedicationRequest` resource can be sorted by prescription type.
-
-```http
-GET /MedicationRequest?_sort=prescription-type
-GET /MedicationRequest?_sort=-prescription-type
-```
 
 ## Paging
 
