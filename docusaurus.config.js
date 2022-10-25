@@ -54,7 +54,7 @@ module.exports = {
         {
           to: "docs/version-history/releases",
           activeBasePath: "docs",
-          label: "Version 0.5.0 (Alpha)",
+          label: "Version 0.6.0 (Alpha)",
           position: "right",
         },
       ],
