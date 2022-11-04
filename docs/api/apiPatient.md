@@ -186,7 +186,7 @@ For more information on using FHIR search modifiers for dates, take a look at th
 
 :::
 
-### Deceased
+<!--### Deceased
 
 To find patients that have been marked as deceased or have a death date entered, the `deceased` search parameter can be used.
 
@@ -194,6 +194,7 @@ To find patients that have been marked as deceased or have a death date entered,
 GET /Patient?deceased=true
 GET /Patient?deceased=false
 ```
+-->
 
 ### \_lastUpdated
 To retrieve `Patients` based on the last updated date of the record.
