@@ -174,7 +174,7 @@ GET /Observation?patient={id}&encounter={id}
 
 ### \_lastUpdated
 
-To retrieve `Observations` based on the updated date of the record.
+To retrieve `Observations` based on the last updated date of the record.
 
 ```http
 GET /Observation?patient={id}&_lastUpdated={value}
@@ -199,16 +199,16 @@ GET /Observation?patient=[value]&_lastUpdated=ne[value]
 GET /Observation?patient=[value]&_lastUpdated=eq[value]
 ```
 
-So to search for an `Observation` on 23rd January 2021 the query would be:
+So to search for an `Observation` last updated on 23rd January 2021 the query would be:
 
 ```http
-GET /Observation?patient=[value]&date=2021-01-23
+GET /Observation?patient=[value]&_lastUpdated=2021-01-23
 ```
 
-To search for all `Observations` before the 23rd December 2020 the query would be:
+To search for all `Observations` last updated before the 23rd December 2020 the query would be:
 
 ```http
-GET /Observation?patient=[value]&date=lt2020-12-23
+GET /Observation?patient=[value]&_lastUpdated=lt2020-12-23
 ```
 <!-- :::important
 Need to check how this was implemented (were modifiers used?)

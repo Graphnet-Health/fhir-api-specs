@@ -40,6 +40,18 @@ module.exports = {
                 "api/apiMedicationRequest",
                 "api/apiMedicationUseCases",
                 ],
+                Condition: [
+                  "api/apiCondition",
+                  //"api/apiAllergyIntolerancePOST",
+                  //"api/apiAllergyIntolerancePUT",
+                  //"api/apiAllergyIntoleranceDELETE",
+                ],
+                Procedure: [
+                  "api/apiProcedure",
+                  //"api/apiAllergyIntolerancePOST",
+                  //"api/apiAllergyIntolerancePUT",
+                  //"api/apiAllergyIntoleranceDELETE",
+                ],
               //FamilyMemberHistory: ["api/apiFamilyMemberHistory"],
               //Immunization: ["api/apiImmunization"],
               //QuestionnaireResponse: [
