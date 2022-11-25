@@ -54,7 +54,7 @@ module.exports = {
         {
           to: "docs/version-history/releases",
           activeBasePath: "docs",
-          label: "Version 0.6.0 (Alpha)",
+          label: "Version 0.7.0 (Alpha)",
           position: "right",
         },
       ],
@@ -183,20 +183,20 @@ module.exports = {
       },
       {
         type: "Condition",
-        active: false,
+        active: true,
         profile:
           "https://fhir.hl7.org.uk/STU3/StructureDefinition/CareConnect-Condition-1",
-        get: "amber",
+        get: "green",
         post: "amber",
         put: "amber",
         delete: "amber",
       },
       {
         type: "Procedure",
-        active: false,
+        active: true,
         profile:
           "https://fhir.hl7.org.uk/STU3/StructureDefinition/CareConnect-Procedure-1",
-        get: "amber",
+        get: "green",
         post: "amber",
         put: "amber",
         delete: "amber",
