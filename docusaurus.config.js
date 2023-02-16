@@ -21,7 +21,7 @@ module.exports = {
       title: "CareCentric FHIR API (STU3)",
       logo: {
         alt: "Graphnet Health Logo",
-        src: "img/Graphnet-Logo-500px.png",
+        src: "img/Transforming-Care-Logo-Resized.png",
       },
       // prism: {
       //   additionalLanguages: ["powershell"],
@@ -63,7 +63,7 @@ module.exports = {
       style: "dark",
       logo: {
         alt: "Graphnet Health Logo",
-        src: "img/Graphnet-Logo-500px.png",
+        src: "img/Graphnet-Logo-RGB.png",
         href: "https://www.graphnethealth.com/",
       },
       links: [
