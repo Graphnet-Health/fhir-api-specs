@@ -113,10 +113,7 @@ GET /MedicationStatement?patient=[value]&effective=lt2020-12-23
 To search for `MedicationStatements` using identifiers present on the `MedicationStatement` record, the following can be used
 
 ```http
-GET /MedicationStatement?patient=[value]&identifier=[code]
 GET /MedicationStatement?patient=[value]&identifier=[system]|[code]
-GET /MedicationStatement?patient=[value]&identifier=|[code]
-GET /MedicationStatement?patient=[value]&identifier=[system]|
 ```
 
 For example
@@ -163,7 +160,6 @@ To improve searching the API supports the use of search modifiers. The modifiers
 |  **le**  | Returns dates less than or equal to the search term    |
 |  **gt**  | Returns dates greater than the search term             |
 |  **ge**  | Returns dates greater than or equal to the search term |
-|  **ne**  | Returns dates not equal to the search term             |
 |  **eq**  | Returns dates equal to the search term                 |
 
 ```http
@@ -171,7 +167,6 @@ GET /MedicationStatement?patient=[value]&last-issued=lt[value]
 GET /MedicationStatement?patient=[value]&last-issued=le[value]
 GET /MedicationStatement?patient=[value]&last-issued=gt[value]
 GET /MedicationStatement?patient=[value]&last-issued=ge[value]
-GET /MedicationStatement?patient=[value]&last-issued=ne[value]
 GET /MedicationStatement?patient=[value]&last-issued=eq[value]
 ```
 So to search for an `MedicationStatement` last issued on 23rd January 2021 the query would be
@@ -231,7 +226,6 @@ To improve searching the API supports the use of search modifiers. The modifiers
 |  **le**  | Returns dates less than or equal to the search term    |
 |  **gt**  | Returns dates greater than the search term             |
 |  **ge**  | Returns dates greater than or equal to the search term |
-|  **ne**  | Returns dates not equal to the search term             |
 |  **eq**  | Returns dates equal to the search term                 |
 
 ```http
@@ -239,7 +233,6 @@ GET /MedicationStatement?patient=[value]&_lastUpdated=lt[value]
 GET /MedicationStatement?patient=[value]&_lastUpdated=le[value]
 GET /MedicationStatement?patient=[value]&_lastUpdated=gt[value]
 GET /MedicationStatement?patient=[value]&_lastUpdated=ge[value]
-GET /MedicationStatement?patient=[value]&_lastUpdated=ne[value]
 GET /MedicationStatement?patient=[value]&_lastUpdated=eq[value]
 ```
 

@@ -56,7 +56,6 @@ GET /Observation?patient=[value]&code=[code]
 GET /Observation?patient=[value]&code=[system]|[code]
 GET /Observation?patient=[value]&code=|[code]
 GET /Observation?patient=[value]&code=[system]|
-GET /Observation?patient=[value]&code:text=[value]
 ```
 
 For example to search for a BMI observation using SNOMED then a query would look like the following:
@@ -94,7 +93,6 @@ To improve searching the API supports the use of search modifiers. The modifiers
 |  **le**  | Returns dates less than or equal to the search term    |
 |  **gt**  | Returns dates greater than the search term             |
 |  **ge**  | Returns dates greater than or equal to the search term |
-|  **ne**  | Returns dates not equal to the search term             |
 |  **eq**  | Returns dates equal to the search term                 |
 
 ```http
@@ -102,7 +100,6 @@ GET /Observation?patient=[value]&date=lt[value]
 GET /Observation?patient=[value]&date=le[value]
 GET /Observation?patient=[value]&date=gt[value]
 GET /Observation?patient=[value]&date=ge[value]
-GET /Observation?patient=[value]&date=ne[value]
 GET /Observation?patient=[value]&date=eq[value]
 ```
 
@@ -129,10 +126,7 @@ For more information on using FHIR search modifiers for dates, take a look at th
 To search for `Observations` using identifiers present on the `Observation` record, the following search constructs can be used.
 
 ```http
-GET /Observation?patient=[value]&identifier=[code]
 GET /Observation?patient=[value]&identifier=[system]|[code]
-GET /Observation?patient=[value]&identifier=|[code]
-GET /Observation?patient=[value]&identifier=[system]|
 ```
 
 For example:
@@ -187,7 +181,6 @@ To improve searching the API supports the use of search modifiers. The modifiers
 |  **le**  | Returns dates less than or equal to the search term    |
 |  **gt**  | Returns dates greater than the search term             |
 |  **ge**  | Returns dates greater than or equal to the search term |
-|  **ne**  | Returns dates not equal to the search term             |
 |  **eq**  | Returns dates equal to the search term                 |
 
 ```http
@@ -195,7 +188,6 @@ GET /Observation?patient=[value]&_lastUpdated=lt[value]
 GET /Observation?patient=[value]&_lastUpdated=le[value]
 GET /Observation?patient=[value]&_lastUpdated=gt[value]
 GET /Observation?patient=[value]&_lastUpdated=ge[value]
-GET /Observation?patient=[value]&_lastUpdated=ne[value]
 GET /Observation?patient=[value]&_lastUpdated=eq[value]
 ```
 

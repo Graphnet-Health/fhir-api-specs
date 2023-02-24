@@ -196,6 +196,15 @@ GET /Patient?deceased=false
 ```
 -->
 
+### Get All Linked Patients
+
+The `getAllLinkedPatients` search parameter is a boolean that allows the Patient to be queried alongside any other search parameter to include in the response any linked or merged Patients.
+
+```http
+GET /Patient?family=smith&getAllLinkedPatients=true 
+```
+Further information on linked and merged patients and how this parameter can be used in chained queries is described in [Linked and Merged Patients](../api/apiLinkedMergedPatient) section.
+
 ### \_lastUpdated
 To retrieve `Patients` based on the last updated date of the record.
 
@@ -211,7 +220,6 @@ To improve searching the API supports the use of search modifiers. The modifiers
 |  **le**  | Returns dates less than or equal to the search term    |
 |  **gt**  | Returns dates greater than the search term             |
 |  **ge**  | Returns dates greater than or equal to the search term |
-|  **ne**  | Returns dates not equal to the search term             |
 |  **eq**  | Returns dates equal to the search term                 |
 
 ```http
@@ -219,7 +227,6 @@ GET /Patient?_lastUpdated=lt1985-06-01
 GET /Patient?_lastUpdated=le1985-06-01
 GET /Patient?_lastUpdated=gt1985-06-01
 GET /Patient?_lastUpdated=ge1985-06-01
-GET /Patient?_lastUpdated=ne1985-06-01
 GET /Patient?_lastUpdated=eq1985-06-01
 ```
 

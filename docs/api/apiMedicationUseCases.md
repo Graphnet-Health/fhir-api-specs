@@ -19,13 +19,14 @@ GET /MedicationRequest?patient={id}&intent=order
 ```
 
 ### Repeat Prescriptions
-To query for all current repeat prescriptions for a patient, use the MedicationStatement API with the following parameters:
+To query for all current repeat prescriptions for a patient, use the MedicationRequest API with the following parameters:
 
+intent = `plan`  
 status = `active`  
 prescription-type = `https://fhir.graphnethealth.com/CodeSystem-PrescriptionType|R`  
 
 ```http
-GET /MedicationStatement?patient=[value]&status=active&prescription-type=https://fhir.graphnethealth.com/CodeSystem-PrescriptionType|R
+GET /MedicationRequest?patient=[value]&intent=plan&status=active&prescription-type=https://fhir.graphnethealth.com/CodeSystem-PrescriptionType|R
 ```
 
 ## Examples
