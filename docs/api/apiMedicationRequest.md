@@ -6,7 +6,7 @@ sidebar_label: GET MedicationRequest
 
 ## Overview
 
-The **MedicationRequest** API can be used to interact with data relating to the authorisation and issue(s) of medications for a patient. When querying for data it must always be in the context of a single patient.
+The **MedicationRequest** API can be used to interact with data relating to the authorisation and issue(s) of medications for a patient. When querying for data it must always be in the context of a single patient and must state the `intent` of the Medication Request.
 
 <!--`MedicationRequest` records can be created, updated, queried and deleted using this API.-->
 
@@ -36,34 +36,50 @@ Unless retrieving a `MedicationRequest` resource by the use of `id` then the `su
 ### Subject
 
 ```http
-GET /MedicationRequest?patient=Patient/{id}
+GET /MedicationRequest?patient=Patient/{id}&intent=[value]
 ```
 
 When searching for NHS Numbers then use the system `https://fhir.nhs.uk/Id/nhs-number`
 For example
 
 ```http
-GET /MedicationRequest?patient.identifier=https://fhir.nhs.uk/Id/nhs-number|1234567890
+GET /MedicationRequest?patient.identifier=https://fhir.nhs.uk/Id/nhs-number|1234567890&intent=[value]
 ```
 
 All the search examples shown below will accept the patient parameter in either form.
+
+### Intent
+
+To search `MedicationRequests` based on intent, the following can be used.
+
+```http
+GET /MedicationRequest?patient={id}&intent=[value]
+```
+Permitted Values
+
+|Code	         |Definition |
+| :------------: |---------------------------------------------- |
+|proposal        |The request is a suggestion made by someone/something that doesn't have an intention to ensure it occurs and without providing an authorization to act|
+|plan            |The request represents an intension to ensure something occurs without providing an authorization for others to act|
+|order           |The request represents a request/demand and authorization for action|
+|instance-order  |The request represents an instance for the particular order, for example a medication administration record.|
+
 
 ### Code
 
 When searching for `MedicationRequests` with a specific medication code then the query can be constructed using different combinations of the code system and the code value.
 
 ```http
-GET /MedicationRequest?patient=[value]&code=[code]
-GET /MedicationRequest?patient=[value]&code=[system]|[code]
-GET /MedicationRequest?patient=[value]&code=|[code]
-GET /MedicationRequest?patient=[value]&code=[system]|
-GET /MedicationRequest?patient=[value]&code:text=[value]
+GET /MedicationRequest?patient=[value]&intent=[value]&code=[code]
+GET /MedicationRequest?patient=[value]&intent=[value]&code=[system]|[code]
+GET /MedicationRequest?patient=[value]&intent=[value]&code=|[code]
+GET /MedicationRequest?patient=[value]&intent=[value]&code=[system]|
 ```
 
 For example to search for a MedicationRequest for 'Amoxicillin 500mg capsules' using SNOMED then a query would look like the following.
 
 ```http
-GET /MedicationRequest?patient=[value]&code=http://snomed.info/sct|39732411000001100
+GET /MedicationRequest?patient=[value]&intent=[value]&code=http://snomed.info/sct|39732411000001100
 ```
 
 :::tip
@@ -75,7 +91,7 @@ For further information consult the FHIR specification at http://hl7.org/fhir/ST
 To search on the date a `MedicationRequest` was authored on the following search constructs can be used.
 
 ```http
-GET /MedicationRequest?patient=[value]&authoredon=[value]
+GET /MedicationRequest?patient=[value]&intent=order&authoredon=[value]
 ```
 To improve searching the API supports the use of search modifiers. The modifiers supported for `date` are as below:
 
@@ -85,27 +101,25 @@ To improve searching the API supports the use of search modifiers. The modifiers
 |  **le**  | Returns dates less than or equal to the search term    |
 |  **gt**  | Returns dates greater than the search term             |
 |  **ge**  | Returns dates greater than or equal to the search term |
-|  **ne**  | Returns dates not equal to the search term             |
 |  **eq**  | Returns dates equal to the search term                 |
 
 ```http
-GET /MedicationRequest?patient=[value]&authoredon=lt[value]
-GET /MedicationRequest?patient=[value]&authoredon=le[value]
-GET /MedicationRequest?patient=[value]&authoredon=gt[value]
-GET /MedicationRequest?patient=[value]&authoredon=ge[value]
-GET /MedicationRequest?patient=[value]&authoredon=ne[value]
-GET /MedicationRequest?patient=[value]&authoredon=eq[value]
+GET /MedicationRequest?patient=[value]&intent=[value]&authoredon=lt[value]
+GET /MedicationRequest?patient=[value]&intent=[value]&authoredon=le[value]
+GET /MedicationRequest?patient=[value]&intent=[value]&authoredon=gt[value]
+GET /MedicationRequest?patient=[value]&intent=[value]&authoredon=ge[value]
+GET /MedicationRequest?patient=[value]&intent=[value]&authoredon=eq[value]
 ```
 So to search for an `MedicationRequest` authored on 23rd January 2021 the query would be
 
 ```http
-GET /MedicationRequest?patient=[value]&authoredon=2021-01-23
+GET /MedicationRequest?patient=[value]&intent=[value]&authoredon=2021-01-23
 ```
 
 To search for all `MedicationRequests` authored before the 23rd December 2020, the following could be used
 
 ```http
-GET /MedicationRequest?patient=[value]&authoredon=lt2020-12-23
+GET /MedicationRequest?patient=[value]&intent=[value]&authoredon=lt2020-12-23
 ```
 
 ### Identifiers
@@ -113,16 +127,16 @@ GET /MedicationRequest?patient=[value]&authoredon=lt2020-12-23
 To search for `MedicationRequests` using identifiers present on the `MedicationRequest` record, the following can be used
 
 ```http
-GET /MedicationRequest?patient=[value]&identifier=[code]
-GET /MedicationRequest?patient=[value]&identifier=[system]|[code]
-GET /MedicationRequest?patient=[value]&identifier=|[code]
-GET /MedicationRequest?patient=[value]&identifier=[system]|
+GET /MedicationRequest?patient=[value]&intent=[value]&identifier=[code]
+GET /MedicationRequest?patient=[value]&intent=[value]&identifier=[system]|[code]
+GET /MedicationRequest?patient=[value]&intent=[value]&identifier=|[code]
+GET /MedicationRequest?patient=[value]&intent=[value]&identifier=[system]|
 ```
 
 For example
 
 ```http
-GET /MedicationRequest?patient=[value]&identifier=http://acme.org/medreqdata|98765-1365428
+GET /MedicationRequest?patient=[value]&intent=[value]&identifier=http://acme.org/medreqdata|98765-1365428
 ```
 
 :::tip
@@ -134,7 +148,7 @@ For further information consult the FHIR specification at http://hl7.org/fhir/ST
 To search `MedicationRequests` based on status, the following can be used.
 
 ```http
-GET /MedicationRequest?patient={id}&status=active
+GET /MedicationRequest?patient={id}&intent=[value]&status=active
 ```
 Permitted Values
 
@@ -148,23 +162,6 @@ Permitted Values
 |stopped         |Actions implied by the prescription are to be permanently halted, before all of them occurred.|
 |draft           |The prescription is not yet 'actionable', i.e. it is a work in progress, requires sign-off or verification, and needs to be run through decision support process.|
 |unknown       |The authoring system does not know which of the status values currently applies for this request|
-
-### Intent
-
-To search `MedicationRequests` based on intent, the following can be used.
-
-```http
-GET /MedicationRequest?patient={id}&intent=order
-```
-Permitted Values
-
-|Code	         |Definition |
-| :------------: |---------------------------------------------- |
-|proposal        |The request is a suggestion made by someone/something that doesn't have an intention to ensure it occurs and without providing an authorization to act|
-|plan            |The request represents an intension to ensure something occurs without providing an authorization for others to act|
-|order           |The request represents a request/demand and authorization for action|
-|instance-order  |The request represents an instance for the particular order, for example a medication administration record.|
-
 
 
 ### \_lastUpdated
@@ -182,7 +179,6 @@ To improve searching the API supports the use of search modifiers. The modifiers
 |  **le**  | Returns dates less than or equal to the search term    |
 |  **gt**  | Returns dates greater than the search term             |
 |  **ge**  | Returns dates greater than or equal to the search term |
-|  **ne**  | Returns dates not equal to the search term             |
 |  **eq**  | Returns dates equal to the search term                 |
 
 ```http
@@ -190,7 +186,6 @@ GET /MedicationRequest?patient=[value]&_lastUpdated=lt[value]
 GET /MedicationRequest?patient=[value]&_lastUpdated=le[value]
 GET /MedicationRequest?patient=[value]&_lastUpdated=gt[value]
 GET /MedicationRequest?patient=[value]&_lastUpdated=ge[value]
-GET /MedicationRequest?patient=[value]&_lastUpdated=ne[value]
 GET /MedicationRequest?patient=[value]&_lastUpdated=eq[value]
 ```
 
@@ -199,7 +194,7 @@ GET /MedicationRequest?patient=[value]&_lastUpdated=eq[value]
 Adding the `_summary=count` query parameter will change the behaviour of the query to return just the count of records, rather than the records themselves.
 
 ```http
-GET /MedicationRequest?patient={id}&_summary=count
+GET /MedicationRequest?patient={id}&intent=[value]&_summary=count
 ```
 
 will return a response along the lines of
@@ -230,12 +225,12 @@ The API supports both XML and JSON formats. The default format is JSON. The form
 |  application/fhir+json  | JSON                |
 
 ```http
-GET /MedicationRequest?patient={id}&_format=[format value]
+GET /MedicationRequest?patient={id}&intent=[value]&_format=[format value]
 ```
 For example the query below would return a response in XML format.
 
 ```http
-GET /MedicationRequest?patient={id}&_format=xml
+GET /MedicationRequest?patient={id}&intent=[value]&_format=xml
 ```
 
 This can be added to any query construct.
@@ -249,7 +244,7 @@ The default sort order for `MedicationRequest` records is in descending date ord
 ### \_count
 
 ```http
-GET /MedicationRequest?patient={id}&status={code}
+GET /MedicationRequest?patient={id}&intent=[value]&status={code}
 ```
 
 ## Examples

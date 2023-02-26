@@ -56,7 +56,6 @@ GET /AllergyIntolerance?patient=[value]&code=[code]
 GET /AllergyIntolerance?patient=[value]&code=[system]|[code]
 GET /AllergyIntolerance?patient=[value]&code=|[code]
 GET /AllergyIntolerance?patient=[value]&code=[system]|
-GET /AllergyIntolerance?patient=[value]&code:text=[value]
 ```
 
 For example to search for a Peanut Allergy Intolerance using SNOMED would look like the following:
@@ -84,7 +83,6 @@ To improve searching the API supports the use of search modifiers. The modifiers
 |  **le**  | Returns dates less than or equal to the search term    |
 |  **gt**  | Returns dates greater than the search term             |
 |  **ge**  | Returns dates greater than or equal to the search term |
-|  **ne**  | Returns dates not equal to the search term             |
 |  **eq**  | Returns dates equal to the search term                 |
 
 ```http
@@ -92,7 +90,6 @@ GET /AllergyIntolerance?patient=[value]&date=lt[value]
 GET /AllergyIntolerance?patient=[value]&date=le[value]
 GET /AllergyIntolerance?patient=[value]&date=gt[value]
 GET /AllergyIntolerance?patient=[value]&date=ge[value]
-GET /AllergyIntolerance?patient=[value]&date=ne[value]
 GET /AllergyIntolerance?patient=[value]&date=eq[value]
 ```
 
@@ -118,10 +115,7 @@ For more information on using FHIR search modifiers for dates, take a look at th
 To search for `AllergyIntolerances` using identifiers present on the `AllergyIntolerance` record the following search constructs can be used.
 
 ```http
-GET /AllergyIntolerance?patient=[value]&identifier=[code]
 GET /AllergyIntolerance?patient=[value]&identifier=[system]|[code]
-GET /AllergyIntolerance?patient=[value]&identifier=|[code]
-GET /AllergyIntolerance?patient=[value]&identifier=[system]|
 ```
 
 For example:
@@ -141,6 +135,36 @@ To retrieve `AllergyIntolerances` based on the last updated date of the record.
 ```http
 GET /AllergyIntolerance?patient={id}&_lastUpdated={value}
 ```
+To improve searching the API supports the use of search modifiers. The modifiers supported for `date` are as below:
+
+| Modifier | Description                                            |
+| :------: | ------------------------------------------------------ |
+|  **lt**  | Returns dates less than the search term                |
+|  **le**  | Returns dates less than or equal to the search term    |
+|  **gt**  | Returns dates greater than the search term             |
+|  **ge**  | Returns dates greater than or equal to the search term |
+|  **eq**  | Returns dates equal to the search term                 |
+
+```http
+GET /AllergyIntolerance?patient=[value]&_lastUpdated=lt[value]
+GET /AllergyIntolerance?patient=[value]&_lastUpdated=le[value]
+GET /AllergyIntolerance?patient=[value]&_lastUpdated=gt[value]
+GET /AllergyIntolerance?patient=[value]&_lastUpdated=ge[value]
+GET /AllergyIntolerance?patient=[value]&_lastUpdated=eq[value]
+```
+
+So to search for an `AllergyIntolerance` last updated on 23rd January 2021 the query would be:
+
+```http
+GET /AllergyIntolerance?patient=[value]&_lastUpdated=2021-01-23
+```
+
+To search for all `AllergyIntolerances` last updated before the 23rd December 2020 the query would be:
+
+```http
+GET /AllergyIntolerance?patient=[value]&_lastUpdated=lt2020-12-23
+```
+
 
 <!-- :::important
 Need to check how this was implemented (were modifiers used?)

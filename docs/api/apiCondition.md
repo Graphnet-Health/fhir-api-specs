@@ -56,7 +56,6 @@ GET /Condition?patient=[value]&code=[code]
 GET /Condition?patient=[value]&code=[system]|[code]
 GET /Condition?patient=[value]&code=|[code]
 GET /Condition?patient=[value]&code=[system]|
-GET /Condition?patient=[value]&code:text=[value]
 ```
 
 For example to search for a Condition of Chronic heart disease using SNOMED then a query would look like the following:
@@ -94,7 +93,6 @@ To improve searching the API supports the use of search modifiers. The modifiers
 |  **le**  | Returns dates less than or equal to the search term    |
 |  **gt**  | Returns dates greater than the search term             |
 |  **ge**  | Returns dates greater than or equal to the search term |
-|  **ne**  | Returns dates not equal to the search term             |
 |  **eq**  | Returns dates equal to the search term                 |
 
 ```http
@@ -102,7 +100,6 @@ GET /Condition?patient=[value]&onset-date=lt[value]
 GET /Condition?patient=[value]&onset-date=le[value]
 GET /Condition?patient=[value]&onset-date=gt[value]
 GET /Condition?patient=[value]&onset-date=ge[value]
-GET /Condition?patient=[value]&onset-date=ne[value]
 GET /Condition?patient=[value]&onset-date=eq[value]
 ```
 
@@ -138,7 +135,6 @@ To improve searching the API supports the use of search modifiers. The modifiers
 |  **le**  | Returns dates less than or equal to the search term    |
 |  **gt**  | Returns dates greater than the search term             |
 |  **ge**  | Returns dates greater than or equal to the search term |
-|  **ne**  | Returns dates not equal to the search term             |
 |  **eq**  | Returns dates equal to the search term                 |
 
 ```http
@@ -146,7 +142,6 @@ GET /Condition?patient=[value]&asserted-date=lt[value]
 GET /Condition?patient=[value]&asserted-date=le[value]
 GET /Condition?patient=[value]&asserted-date=gt[value]
 GET /Condition?patient=[value]&asserted-date=ge[value]
-GET /Condition?patient=[value]&asserted-date=ne[value]
 GET /Condition?patient=[value]&asserted-date=eq[value]
 ```
 
@@ -172,10 +167,7 @@ For more information on using FHIR search modifiers for dates, take a look at th
 To search for `Conditions` using identifiers present on the `Condition` record, the following search constructs can be used.
 
 ```http
-GET /Condition?patient=[value]&identifier=[code]
 GET /Condition?patient=[value]&identifier=[system]|[code]
-GET /Condition?patient=[value]&identifier=|[code]
-GET /Condition?patient=[value]&identifier=[system]|
 ```
 
 For example:
@@ -197,7 +189,6 @@ GET /Condition?patient=[value]&category=[code]
 GET /Condition?patient=[value]&category=[system]|[code]
 GET /Condition?patient=[value]&category=|[code]
 GET /Condition?patient=[value]&category=[system]|
-GET /Condition?patient=[value]&category:text=[value]
 ```
 
 ### Clinical Status
@@ -223,7 +214,6 @@ To improve searching the API supports the use of search modifiers. The modifiers
 |  **le**  | Returns dates less than or equal to the search term    |
 |  **gt**  | Returns dates greater than the search term             |
 |  **ge**  | Returns dates greater than or equal to the search term |
-|  **ne**  | Returns dates not equal to the search term             |
 |  **eq**  | Returns dates equal to the search term                 |
 
 ```http
@@ -231,7 +221,6 @@ GET /Condition?patient=[value]&_lastUpdated=lt[value]
 GET /Condition?patient=[value]&_lastUpdated=le[value]
 GET /Condition?patient=[value]&_lastUpdated=gt[value]
 GET /Condition?patient=[value]&_lastUpdated=ge[value]
-GET /Condition?patient=[value]&_lastUpdated=ne[value]
 GET /Condition?patient=[value]&_lastUpdated=eq[value]
 ```
 

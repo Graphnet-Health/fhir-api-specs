@@ -20,92 +20,88 @@ module.exports = {
         "api/apiOverview",
         {
           type: "category",
-		  label: "Resources",
-		  items: [
+          label: "Resources",
+          items: [
             {
               type: "category",
-			  label: "Patient",
-			  items: ["api/apiPatient"],
-			},
-			{
+              label: "Patient",
+              items: ["api/apiPatient",
+                "api/apiLinkedMergedPatient"]
+
+            },
+            {
               type: "category",
-			  label: "Observation",
-			  items: [
-			    "api/apiObservation",
+              label: "Observation",
+              items: [
+                "api/apiObservation",
                 //"api/apiObservationPOST",
                 //"api/apiObservationPUT",
                 //"api/apiObservationDELETE",
               ]
-			},
-			{
-			  type: "category",
-			  label: "AllergyIntolerance",
-			  items: [
+            },
+            {
+              type: "category",
+              label: "AllergyIntolerance",
+              items: [
                 "api/apiAllergyIntolerance",
                 //"api/apiAllergyIntolerancePOST",
                 //"api/apiAllergyIntolerancePUT",
                 //"api/apiAllergyIntoleranceDELETE",
               ]
-			},
-			{
+            },
+            {
               type: "category",
-			  label: "Medications",
-			  items: [
-                "api/apiMedicationOverview",
+              label: "Medications",
+              items: [
+                //"api/apiMedicationOverview",
                 "api/apiMedicationStatement",
                 "api/apiMedicationRequest",
                 "api/apiMedicationUseCases",
-                ]
-			},
-			{
-			  type: "category",
-			  label: "Condition",
-			  items: [
-                  "api/apiCondition",
-                  //"api/apiAllergyIntolerancePOST",
-                  //"api/apiAllergyIntolerancePUT",
-                  //"api/apiAllergyIntoleranceDELETE",
-                ]
-			},
-			{
-			  type: "category",
-			  label: "Procedure",
-			  items: [
-                  "api/apiProcedure",
-                  //"api/apiAllergyIntolerancePOST",
-                  //"api/apiAllergyIntolerancePUT",
-                  //"api/apiAllergyIntoleranceDELETE",
-                ]
-			},
-			//{
-			  //type: "category",
-			  //label: "FamilyMemberHistory",
-			  //items: ["api/apiFamilyMemberHistory"]
-			//},
-			//{
-			  //type: "category",
-			  //label: "Immunization",
-			  //items: ["api/apiImmunization"]
-			//},
-			//{
-              //type: "category",
-			  //label: "QuestionnaireResponse",
-			  //items: [
-                //"api/apiQuestionnaireResponse",
-                //"api/apiQuestionnaireResponsePOST",
-                //"api/apiQuestionnaireResponsePUT",
-                //"api/apiQuestionnaireResponseDELETE",
-              //],
-			//},
-			//{
-              //type: "category",
-			  //label: "Flag",
-			  //items: [
-                //"api/apiFlag",
-                //"api/apiFlagPOST",
-                //"api/apiFlagPUT",
-                //"api/apiFlagDELETE",
-              //]
+              ]
+            },
+            {
+              type: "category",
+              label: "Condition",
+              items: [
+                "api/apiCondition",
+              ]
+            },
+            {
+              type: "category",
+              label: "Procedure",
+              items: [
+                "api/apiProcedure",
+              ]
+            },
+            //{
+            //type: "category",
+            //label: "FamilyMemberHistory",
+            //items: ["api/apiFamilyMemberHistory"]
+            //},
+            //{
+            //type: "category",
+            //label: "Immunization",
+            //items: ["api/apiImmunization"]
+            //},
+            //{
+            //type: "category",
+            //label: "QuestionnaireResponse",
+            //items: [
+            //"api/apiQuestionnaireResponse",
+            //"api/apiQuestionnaireResponsePOST",
+            //"api/apiQuestionnaireResponsePUT",
+            //"api/apiQuestionnaireResponseDELETE",
+            //],
+            //},
+            //{
+            //type: "category",
+            //label: "Flag",
+            //items: [
+            //"api/apiFlag",
+            //"api/apiFlagPOST",
+            //"api/apiFlagPUT",
+            //"api/apiFlagDELETE",
+            //]
             //},
           ],
         },
@@ -138,8 +134,8 @@ module.exports = {
         "profiles/profileOverview",
         {
           type: "category",
-		  label: "Profiles",
-		  items: [
+          label: "Profiles",
+          items: [
             "profiles/AllergyIntolerance",
             // "profiles/Condition",
             // "profiles/Encounter",
@@ -155,14 +151,14 @@ module.exports = {
           ],
         },
         //{
-          //type: "category",
-		  //label: "Extensions",
-		  //items: [
-            // "resources/extLastIssueDate",
-            // "resources/extPrescriptionType",
-          //],
+        //type: "category",
+        //label: "Extensions",
+        //items: [
+        // "resources/extLastIssueDate",
+        // "resources/extPrescriptionType",
+        //],
         //}
       ],
     },
-  ], 
+  ],
 };

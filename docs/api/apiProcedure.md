@@ -56,7 +56,6 @@ GET /Procedure?patient=[value]&code=[code]
 GET /Procedure?patient=[value]&code=[system]|[code]
 GET /Procedure?patient=[value]&code=|[code]
 GET /Procedure?patient=[value]&code=[system]|
-GET /Procedure?patient=[value]&code:text=[value]
 ```
 
 For example to search for a Colonoscopy Procedure using SNOMED then a query would look like the following:
@@ -94,7 +93,6 @@ To improve searching the API supports the use of search modifiers. The modifiers
 |  **le**  | Returns dates less than or equal to the search term    |
 |  **gt**  | Returns dates greater than the search term             |
 |  **ge**  | Returns dates greater than or equal to the search term |
-|  **ne**  | Returns dates not equal to the search term             |
 |  **eq**  | Returns dates equal to the search term                 |
 
 ```http
@@ -102,7 +100,6 @@ GET /Procedure?patient=[value]&date=lt[value]
 GET /Procedure?patient=[value]&date=le[value]
 GET /Procedure?patient=[value]&date=gt[value]
 GET /Procedure?patient=[value]&date=ge[value]
-GET /Procedure?patient=[value]&date=ne[value]
 GET /Procedure?patient=[value]&date=eq[value]
 ```
 
@@ -128,10 +125,7 @@ For more information on using FHIR search modifiers for dates, take a look at th
 To search for `Procedures` using identifiers present on the `Procedure` record, the following search constructs can be used.
 
 ```http
-GET /Procedure?patient=[value]&identifier=[code]
 GET /Procedure?patient=[value]&identifier=[system]|[code]
-GET /Procedure?patient=[value]&identifier=|[code]
-GET /Procedure?patient=[value]&identifier=[system]|
 ```
 
 For example:
@@ -153,7 +147,6 @@ GET /Procedure?patient=[value]&category=[code]
 GET /Procedure?patient=[value]&category=[system]|[code]
 GET /Procedure?patient=[value]&category=|[code]
 GET /Procedure?patient=[value]&category=[system]|
-GET /Procedure?patient=[value]&category:text=[value]
 ```
 
 ### Status
@@ -179,7 +172,6 @@ To improve searching the API supports the use of search modifiers. The modifiers
 |  **le**  | Returns dates less than or equal to the search term    |
 |  **gt**  | Returns dates greater than the search term             |
 |  **ge**  | Returns dates greater than or equal to the search term |
-|  **ne**  | Returns dates not equal to the search term             |
 |  **eq**  | Returns dates equal to the search term                 |
 
 ```http
@@ -187,7 +179,6 @@ GET /Procedure?patient=[value]&_lastUpdated=lt[value]
 GET /Procedure?patient=[value]&_lastUpdated=le[value]
 GET /Procedure?patient=[value]&_lastUpdated=gt[value]
 GET /Procedure?patient=[value]&_lastUpdated=ge[value]
-GET /Procedure?patient=[value]&_lastUpdated=ne[value]
 GET /Procedure?patient=[value]&_lastUpdated=eq[value]
 ```
 
