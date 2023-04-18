@@ -26,7 +26,7 @@ status = `active`
 prescription-type = `https://fhir.graphnethealth.com/CodeSystem-PrescriptionType|R`  
 
 ```http
-GET /MedicationStatement?patient=[value]&intent=plan&status=active&prescription-type=https://fhir.graphnethealth.com/CodeSystem-PrescriptionType|R
+GET /MedicationStatement?patient=[value]&status=active&prescription-type=https://fhir.graphnethealth.com/CodeSystem-PrescriptionType|R
 ```
 
 ## Examples
