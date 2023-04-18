@@ -12,6 +12,9 @@ The **Condition** API can be used to interact with Condition records for a patie
 
 - Retrieving or searching for `Condition` records is performed using a HTTP GET described below.
 
+:::info
+The **Condition** API supports Clinical items only. Other items such as GP Problems will be added in a later release.
+:::
 
 ## Condition Retrieval
 
@@ -54,7 +57,6 @@ When searching for `Conditions` with a specific code the query can be constructe
 ```http
 GET /Condition?patient=[value]&code=[code]
 GET /Condition?patient=[value]&code=[system]|[code]
-GET /Condition?patient=[value]&code=|[code]
 GET /Condition?patient=[value]&code=[system]|
 ```
 
@@ -187,7 +189,6 @@ To search for `Conditions` classified by type, the following search constructs c
 ```http
 GET /Condition?patient=[value]&category=[code]
 GET /Condition?patient=[value]&category=[system]|[code]
-GET /Condition?patient=[value]&category=|[code]
 GET /Condition?patient=[value]&category=[system]|
 ```
 

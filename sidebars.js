@@ -26,7 +26,8 @@ module.exports = {
               type: "category",
               label: "Patient",
               items: ["api/apiPatient",
-                "api/apiLinkedMergedPatient"]
+                //"api/apiLinkedMergedPatient",
+              ]
 
             },
             {

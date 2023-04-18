@@ -54,7 +54,6 @@ When searching for `AllergyIntolerances` with a specific code the query can be c
 ```http
 GET /AllergyIntolerance?patient=[value]&code=[code]
 GET /AllergyIntolerance?patient=[value]&code=[system]|[code]
-GET /AllergyIntolerance?patient=[value]&code=|[code]
 GET /AllergyIntolerance?patient=[value]&code=[system]|
 ```
 

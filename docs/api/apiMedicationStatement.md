@@ -54,9 +54,7 @@ When searching for `MedicationStatements` with a specific medication code then t
 ```http
 GET /MedicationStatement?patient=[value]&code=[code]
 GET /MedicationStatement?patient=[value]&code=[system]|[code]
-GET /MedicationStatement?patient=[value]&code=|[code]
 GET /MedicationStatement?patient=[value]&code=[system]|
-GET /MedicationStatement?patient=[value]&code:text=[value]
 ```
 
 For example to search for a MedicationStatement for 'Amoxicillin 500mg capsules' using SNOMED then a query would look like the following.
@@ -188,7 +186,6 @@ To search for `MedicationStatements` based on the prescription type of the recor
 ```http
 GET /MedicationStatement?patient=[value]&prescription-type=[code]
 GET /MedicationStatement?patient=[value]&prescription-type=[system]|[code]
-GET /MedicationStatement?patient=[value]&prescription-type=|[code]
 GET /MedicationStatement?patient=[value]&prescription-type=[system]|
 ```
 Permitted values:
@@ -297,21 +294,23 @@ GET /MedicationStatement?_sort=last-issued
 GET /MedicationStatement?_sort=-last-issued
 ```
 
-### Status
+<!--### Status
 The `MedicationStatement` resource can be sorted by status.
 
 ```http
 GET /MedicationStatement?_sort=status
 GET /MedicationStatement?_sort=-status
 ```
+-->
 
-### Prescription Type
+<!--### Prescription Type
 The `MedicationStatement` resource can be sorted by prescription type.
 
 ```http
 GET /MedicationStatement?_sort=prescription-type
 GET /MedicationStatement?_sort=-prescription-type
 ```
+-->
 
 ## Paging
 

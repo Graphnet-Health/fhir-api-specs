@@ -196,7 +196,7 @@ GET /Patient?deceased=false
 ```
 -->
 
-### Get All Linked Patients
+<!--### Get All Linked Patients
 
 The `getAllLinkedPatients` search parameter is a boolean that allows the Patient to be queried alongside any other search parameter to include in the response any linked or merged Patients.
 
@@ -204,6 +204,7 @@ The `getAllLinkedPatients` search parameter is a boolean that allows the Patient
 GET /Patient?family=smith&getAllLinkedPatients=true 
 ```
 Further information on linked and merged patients and how this parameter can be used in chained queries is described in [Linked and Merged Patients](../api/apiLinkedMergedPatient) section.
+-->
 
 ### \_lastUpdated
 To retrieve `Patients` based on the last updated date of the record.

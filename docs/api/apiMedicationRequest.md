@@ -72,7 +72,6 @@ When searching for `MedicationRequests` with a specific medication code then the
 ```http
 GET /MedicationRequest?patient=[value]&intent=[value]&code=[code]
 GET /MedicationRequest?patient=[value]&intent=[value]&code=[system]|[code]
-GET /MedicationRequest?patient=[value]&intent=[value]&code=|[code]
 GET /MedicationRequest?patient=[value]&intent=[value]&code=[system]|
 ```
 
@@ -127,10 +126,7 @@ GET /MedicationRequest?patient=[value]&intent=[value]&authoredon=lt2020-12-23
 To search for `MedicationRequests` using identifiers present on the `MedicationRequest` record, the following can be used
 
 ```http
-GET /MedicationRequest?patient=[value]&intent=[value]&identifier=[code]
 GET /MedicationRequest?patient=[value]&intent=[value]&identifier=[system]|[code]
-GET /MedicationRequest?patient=[value]&intent=[value]&identifier=|[code]
-GET /MedicationRequest?patient=[value]&intent=[value]&identifier=[system]|
 ```
 
 For example

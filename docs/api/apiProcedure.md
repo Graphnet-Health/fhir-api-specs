@@ -54,7 +54,6 @@ When searching for `Procedures` with a specific code the query can be constructe
 ```http
 GET /Procedure?patient=[value]&code=[code]
 GET /Procedure?patient=[value]&code=[system]|[code]
-GET /Procedure?patient=[value]&code=|[code]
 GET /Procedure?patient=[value]&code=[system]|
 ```
 
@@ -145,7 +144,6 @@ To search for `Procedures` classified by type, the following search constructs c
 ```http
 GET /Procedure?patient=[value]&category=[code]
 GET /Procedure?patient=[value]&category=[system]|[code]
-GET /Procedure?patient=[value]&category=|[code]
 GET /Procedure?patient=[value]&category=[system]|
 ```
 

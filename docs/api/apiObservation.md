@@ -54,7 +54,6 @@ When searching for `Observations` with a specific code the query can be construc
 ```http
 GET /Observation?patient=[value]&code=[code]
 GET /Observation?patient=[value]&code=[system]|[code]
-GET /Observation?patient=[value]&code=|[code]
 GET /Observation?patient=[value]&code=[system]|
 ```
 
@@ -146,7 +145,6 @@ To search for `Observations` classified by type, the following search constructs
 ```http
 GET /Observation?patient=[value]&category=[code]
 GET /Observation?patient=[value]&category=[system]|[code]
-GET /Observation?patient=[value]&category=|[code]
 GET /Observation?patient=[value]&category=[system]|
 ```
 
