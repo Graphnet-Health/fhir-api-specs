@@ -239,8 +239,15 @@ The default sort order for `MedicationRequest` records is in descending date ord
 
 ### \_count
 
+The parameter `_count` is defined as a hint to the server regarding how many resources should be returned in a single page.
+
 ```http
-GET /MedicationRequest?patient={id}&intent=[value]&status={code}
+GET /MedicationRequest?patient={id}&intent={code}&_count=[n]
+```
+For example the query below would return a `Bundle` with 5 records per page.
+
+```http
+GET /MedicationRequest?patient={id}&intent={code}&_count=5
 ```
 
 ## Examples

@@ -267,6 +267,10 @@ GET /Observation?_sort=-date
 ### \_count
 The parameter `_count` is defined as a hint to the server regarding how many resources should be returned in a single page.
 
+```http
+GET /Observation?patient={id}&status={code}&_count=[n]
+```
+
 For example the query below would return a `Bundle` with 5 records per page.
 
 ```http
